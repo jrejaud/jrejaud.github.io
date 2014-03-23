@@ -34,7 +34,7 @@ ul
 {
     display: block;
     list-style-type: none;
-    width: 900px;
+    width: 1100px;
     margin: 0 auto;
     padding: 0;
 }
@@ -143,6 +143,7 @@ p
 {
     line-height: 1.4;
     font-size: 150%;
+    margin-left: 15px;
 }
 p img
 {
