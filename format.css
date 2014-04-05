@@ -104,6 +104,7 @@ h2
     color: #56C5FF; /* Blue Text */
     margin-left: 40px;
     line-height: 1.4;
+    font-size: 175%;
 }
 .project_list
 {
@@ -170,8 +171,8 @@ embed
 {
    margin-left: 5%;
    margin-right: 5%;
-   margin-bottom: 15px;
-   margin-top: 15px;
+   margin-bottom: 25px;
+   margin-top: 10px;
 }
 /* Color Classes */
 .olive
