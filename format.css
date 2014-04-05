@@ -87,6 +87,7 @@ h1
 {
     color: #56C5FF; /* Blue Text */
     margin-left: 15px;
+    font-size: 225%;
 }
 summary
 {
@@ -104,7 +105,11 @@ h2
     color: #56C5FF; /* Blue Text */
     margin-left: 40px;
     line-height: 1.4;
-    font-size: 175%;
+    font-size: 200%;
+}
+.cvlist
+{
+    font-size: 225%;
 }
 .project_list
 {
@@ -112,6 +117,10 @@ h2
     margin-right: 15px;
     line-height: 1.4;
     text-align: center;
+}
+.bottombar
+{
+    margin-bottom: 40px;
 }
 h2 a
 {
@@ -133,6 +142,13 @@ h2 img
     height:150px;
     float: left;
     margin:15px;
+}
+.cvimage
+{
+    height:150px;
+    float: left;
+    margin:15px;
+    margin-right:25px;
 }
 h3
 {
@@ -173,6 +189,11 @@ embed
    margin-right: 5%;
    margin-bottom: 25px;
    margin-top: 10px;
+}
+.pagestuff
+{
+    margin-left: 13%;
+    margin-right: 13%;
 }
 /* Color Classes */
 .olive
