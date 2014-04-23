@@ -88,13 +88,13 @@ h1
 {
     color: #56C5FF; /* Blue Text */
     margin-left: 15px;
-    font-size: 200%;
+    font-size: 35px;
 }
 summary
 {
     color: #56C5FF; /* Blue Text */
     margin-left: 15px;
-    font-size: 225%;
+    font-size: 30px;
     line-height: 1.4;
 }
 summary:hover
@@ -106,7 +106,7 @@ h2
     color: #56C5FF; /* Blue Text */
     margin-left: 40px;
     line-height: 1.4;
-    font-size: 200%;
+    font-size: 30px;
 }
 .cvlist
 {
@@ -160,7 +160,7 @@ h3
 p
 {
     line-height: 1.4;
-    font-size: 150%;
+    font-size: 23px;
     margin-left: 15px;
 }
 p img
@@ -174,8 +174,8 @@ embed
 {
     float: left;
     margin-right: 25px;
-    width: 853px;
-    height: 480px;    
+    width: 640px;
+    height: 360px;    
 }
 .clear
 {
@@ -193,8 +193,8 @@ embed
 }
 .pagestuff
 {
-    margin-left: 13%;
-    margin-right: 13%;
+    margin-left: 8%;
+    margin-right: 8%;
 }
 /* Color Classes */
 .olive
@@ -234,12 +234,3 @@ html, body {height: 100%;}
 	margin-top: -150px; /* negative value of footer height */
 	height: 150px;
 	clear:both;} 
-
-/*Opera Fix*/
-body:before {
-	content:"";
-	height:100%;
-	float:left;
-	width:0;
-	margin-top:-32767px;/
-}
