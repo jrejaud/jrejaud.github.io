@@ -217,12 +217,10 @@ p img
     margin-right: 25px;
     margin-bottom: 25px;
 }
-embed
+iframe
 {
     float: left;
     margin-right: 25px;
-    width: 640px;
-    height: 360px;    
 }
 .clear
 {
