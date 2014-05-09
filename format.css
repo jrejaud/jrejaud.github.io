@@ -217,10 +217,12 @@ p img
     margin-right: 25px;
     margin-bottom: 25px;
 }
+/* iframe (for Youtube Videos) */
 iframe
 {
     float: left;
     margin-right: 25px;
+    margin-bottom: 25px;
     width: 640px;
     height: 360px;    
 }
