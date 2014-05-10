@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!-- style.html by Bill Weinman http://bw.org/contact/ -->
+
+<html>
+<head>
+
+<!-- Link CSS style sheet -->    
+<link rel="stylesheet" type="text/css" href="../format.css">
+
+<div style="font-family: WeblySleekUI;">
+
+    <title>
+        After Arduino
+    </title>
+    
+    <link rel="shortcut icon" href="favicon.ico">
+
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="../index.html">About Me</a></li>
+        <li><a href="../resume.html">Curriculum vitae</a></li>
+        <li><a href="../projects.html">Projects</a></li>
+        <li><a href="../MOOCs.html">Learning</a></li>
+        <li><a style="color: #FFFFFF;" href="../blog.html">Blog</a></li>
+    </ul>
+</nav>           
+<div class="margins">
+
+<h1>
+    After Arduino
+</h1>
+
+<div class="grey_background">
+<h2>
+    Part 1: What is the Arduino and why go beyond?
+</h2>
+</div>
+    <div style="text-align: center;">
+        <p>
+            "Arduino" is both the hardware board (like the Arduino Uno) and the Arduino IDE (what you write your code in)/ "language" (C++) 
+        </p>
+        
+        <figure>
+        <img style="height: 400px;" src="../images/unopictureImage.png">
+        <figcaption style="font-family: LearningCurve; font-size: 42px;">Ceci n'est pas un Microcontroller</figcaption>
+        </figure>
+        
+        <p>
+            Arduino boards are often referred to as microcontroller by electronics neophytes. According to <a href="http://www.arduino.cc/">Arduino</a>’s website:
+        </p>
+        
+        <img style="height: 150px;" src="../images/arduinositeImage.png">   
+    </div>
+    <p>
+        An Arduino board (like the Arduino Uno) isn’t a microcontroller, but rather an electronics prototyping platform that contains a microcontroller. When you upload your code to your arduino board, what you are actually doing is uploading it to the microcontroller on the board. A microcontroller (also referred to as a microcontroller Unit, MCU, or µC) is the “brains” of an Arduino board, but your Arduino board also contains many other components (that you may or may not be using, based on your project).
+    </p>
+    
+    <p>
+        After this great revelation, you must be wondering: “Where is the MCU on my Arduino board?” For this tutorial, let us focus on the Arduino Uno board.
+    </p>
+
+        <table class="learningtable">
+            <td>
+                <figure>
+                <img style="height: 100px;" src="../images/unopicturemcuImage.png">
+                <figcaption>Things that are the MCU</figcaption>
+                </figure>    
+            </td>
+            <td>
+                <figure>
+                <img style="height: 400px;" src="../images/unopicturenomcuImage.png">
+                <figcaption>Things that are <b>not</b> the MCU</figcaption>
+                </figure>
+            </td>
+        </table>
+        <div class="clear"></div>
+        
+    <p>
+        This is all rather edifying, but why would you care what the MCU on your Arduino is? Why bother learning about how the board works and what the Arduino "language" is?
+    </p>
+    
+    <p>
+        Because, with the right hardware and software, you can program your MCU directly without a board and you can write non-Arduino software to run on your Arduino Board! 
+    </p>
+    
+    <p>
+        But that's not all! You also get these amazing perks once you <strike>actually understand wtf is going on</strike> learn how to program MCUs.
+    </p>
+    
+    <p>
+        1. You don't have to use the Arduino IDE anymore. Want to collapse your functions (hide them) while editing? Want to use the same editor to program your Arduino and build a website? Want to be 1337 and upload your Arduino code with the command line?
+    </p>
+    
+        <p></p>
+                <table class="learningtable">
+            <td>
+                <figure>
+                <img style="height: 600px;" src="../images/arduinoideImage.png">
+                <figcaption>The Arduino IDE</figcaption>
+                </figure>    
+            </td>
+            <td>
+                <figure>
+                <img style="height: 600px;" src="../images/komodoideImage.png">
+                <figcaption>Komodo Edit (What I use)</figcaption>
+                </figure>
+            </td>
+        </table>
+        <div class="clear"></div>
+    
+    <p>
+        2. Learn to write programs in AVR-C as opposed to Arduino C++ and your code will be much smaller and faster. The Arduino Blink.ino file takes up 3% of the flash memory space on an Arduino Uno. An equivalent program wirtten in AVR-C would only take up 0.625%
+        and it would run faster. That size and speed difference doesn't matter if you using Blink, but if are writing a more complex program, you will probably notice the difference.
+    </p>
+    
+    <p>
+        3. <del>Become a rich shibe</del> An Arduino Uno costs <a href="https://www.sparkfun.com/products/11021">$25</a>, an ATMega328p costs less then <a href="http://www.digikey.com/product-detail/en/ATMEGA328P-PU/ATMEGA328P-PU-ND/1914589">$4</a>. Not that much money for a single project, but if you plan to make a lot of things, that's quite a difference.
+    </p>
+    
+    <p>
+        4. Size per unit. Arduinos are pretty big. You can make your projects a lot smaller if you build the circuit yourself.
+    </p>
+    
+    <p>
+        For tutorials on how to use the ATMega and program it, click <a href="../MOOCs.html#Embedded Systems">here</a>.
+    </p>
+    
+<div class="clear"></div>
+</div>
+<footer>
+    <table>
+        <td>
+            <p><a href="mailto:jrejaud@gmail.com">Email me</a></p>    
+        </td>
+        <td>
+            <a href="https://twitter.com/JordanRejaud" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false">Follow @JordanRejaud</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </td>
+    </table>
+</footer>
+
+</body>
+
+
+</div>
+</html>

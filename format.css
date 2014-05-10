@@ -6,6 +6,11 @@
     font-family: WeblySleekUI;
     src: url(fonts/weblysleekuil.ttf);
 }
+@font-face
+{
+    font-family: LearningCurve;
+    src: url(fonts/LearningCurve.ttf)
+}
 a
 {
    text-decoration: none; 
@@ -190,7 +195,7 @@ h2 img
 }
 .lessonimage
 {
-    height:65px;
+    height:75px;
     float: left;
     margin-top: 15px;
     margin-left:15px;
@@ -218,11 +223,11 @@ p img
     margin-bottom: 25px;
 }
 /* iframe (for Youtube Videos) */
-iframe
+.ytvideo
 {
     float: left;
     margin-right: 25px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     width: 640px;
     height: 360px;    
 }
@@ -245,6 +250,7 @@ iframe
     margin-left: 8%;
     margin-right: 8%;
 }
+
 /* Color Classes */
 .olive
 {
@@ -270,6 +276,7 @@ iframe
 {
     background-color: #222326;
 }
+
 div h2.white
 {
     color: #FFFFFF;
