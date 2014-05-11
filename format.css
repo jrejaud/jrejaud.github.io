@@ -218,10 +218,12 @@ p
 li
 {
     font-size: 23px;
+    line-height: 1.4;
 }
 figcaption
 {
     font-size: 20px;
+    line-height: 1.4;
 }
 p img
 {
