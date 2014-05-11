@@ -215,6 +215,10 @@ p
     font-size: 23px;
     margin-left: 15px;
 }
+li
+{
+    font-size: 23px;
+}
 figcaption
 {
     font-size: 20px;
