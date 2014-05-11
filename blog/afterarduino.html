@@ -40,7 +40,15 @@
 </div>
     <div style="text-align: center;">
         <p>
-            "Arduino" is both the hardware board (like the Arduino Uno) and the Arduino IDE (what you write your code in)/ "language" (C++) 
+            "Arduino" is, in my experience, often used unspecifically. I argue that there are three parts that make up the Arduino Development Environment
+        </p>
+        <p>
+            1. The Arduino <a href="http://arduino.cc/en/Reference/HomePage">Programming Language</a>: The Arduino "Language" isn't its own programming language, but rather C++ (with many libraries to simply electronics related tasks, like digitalWrite, analogRead, ect).
+        </p>
+            2. The Arduino <a href="http://arduino.cc/en/main/software">IDE</a> (Integrated Development Environment) that lets you write your C++ code, compile it, and upload it to a Microcontroller.
+        </p>
+        <p>
+            3. The Arduino <a href="http://arduino.cc/en/main/boards">boards</a> themselves, such as the Arduino Uno, the Arduino Mega, and the Arduino Micro. There are MANY different boards.
         </p>
         
         <figure>
@@ -55,11 +63,11 @@
         <img style="height: 150px;" src="../images/arduinositeImage.png">   
     </div>
     <p>
-        An Arduino board (like the Arduino Uno) isn&#39t a microcontroller, but rather an electronics prototyping platform that contains a microcontroller. When you upload your code to your arduino board, what you are actually doing is uploading it to the microcontroller on the board. A microcontroller (also referred to as a microcontroller Unit, MCU, or &microC) is the brains of an Arduino board, but your Arduino board also contains many other components (that you may or may not be using, based on your project).
+        An Arduino board (like the Arduino Uno) isn&#39t a microcontroller, but rather an electronics prototyping platform that <b>contains</b> a microcontroller. When you upload your code to your arduino board, what you are actually doing is uploading it to the microcontroller on the board. A microcontroller (also referred to as a microcontroller Unit, MCU, or &microC) is the brains of an Arduino board, but your Arduino board also contains many other components (that you may or may not be using, based on your project).
     </p>
     
     <p>
-        After this great revelation, you must be wondering: &#39Where is the MCU on my Arduino board?&#39 For this tutorial, let us focus on the Arduino Uno board.
+        After this great revelation, you must be wondering: &#39Where is the MCU on my Arduino board?&#39 For this tutorial, let's focus on the Arduino Uno board.
     </p>
     
     <table class="learningtable">
@@ -87,7 +95,7 @@
     </p>
     
     <p>
-        But that's not all! You also get these amazing perks once you <strike>actually understand wtf is going on</strike> learn how to program MCUs.
+        But that's not all! You also get these amazing perks once you <strike>actually understand wtf is going on</strike> delve deeper into how MCUs work.
     </p>
     
     <p>
@@ -111,7 +119,7 @@
     
     <p>
         2. Learn to write programs in AVR-C as opposed to Arduino C++ and your code will be much smaller and faster. The Arduino Blink.ino file takes up 3% of the flash memory space on an Arduino Uno. An equivalent program wirtten in AVR-C would only take up 0.625%
-        and it would run faster. That size and speed difference doesn't matter if you using Blink, but if are writing a more complex program, you will probably notice the difference.
+        and it would run faster. That size and speed difference doesn't matter if you using Blink, but if are writing a more complex program, you will probably notice the difference. The Arduino also uses a <a href="http://www.ladyada.net/learn/avr/programmers.html">bootloader</a> so Arduino programs take up more space, but don't require a dedicated programmer.
     </p>
     
     <p>
