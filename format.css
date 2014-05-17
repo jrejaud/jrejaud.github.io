@@ -215,6 +215,12 @@ p
     font-size: 23px;
     margin-left: 15px;
 }
+pre
+{
+    line-height: 1.4;
+    font-size: 23px;
+    margin-left: 15px;
+}
 li
 {
     font-size: 23px;
@@ -281,6 +287,10 @@ p img
 .amber
 {
     color: #F0A30A;
+}
+.taupe
+{
+    color: #87794E;
 }
 .grey_background
 {

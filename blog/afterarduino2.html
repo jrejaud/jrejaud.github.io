@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<!-- style.html by Bill Weinman http://bw.org/contact/ -->
+
+<html>
+<head>
+
+<!-- Link CSS style sheet -->    
+<link rel="stylesheet" type="text/css" href="../format.css">
+
+<div style="font-family: WeblySleekUI;">
+
+    <title>
+        After Arduino
+    </title>
+    
+    <link rel="shortcut icon" href="favicon.ico">
+
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="../index.html">About Me</a></li>
+        <li><a href="../resume.html">Curriculum vitae</a></li>
+        <li><a href="../projects.html">Projects</a></li>
+        <li><a href="../learning.html">Learning</a></li>
+        <li><a style="color: #FFFFFF;" href="../blog.html">Blog</a></li>
+    </ul>
+</nav>           
+<div class="margins">
+
+<h1>
+    After Arduino
+</h1>
+
+<hr>
+<p>
+    Part 2: AVR-C Reference Guide
+</p>
+<p>
+    Note: This reference guide is intended for those who have completed <a href="http://www.jordanrejaud.com/learning.html#Embedded Systems">AVR-C Tutorials</a>. This will make no sense if you aren't familiar with AVR-C.
+</p>
+<p>
+    Use this guide in conjunction with the <a href="http://www.atmel.com/devices/atmega328p.aspx">ATmega328p</a> datasheet.
+</p>
+<hr>
+
+<a name="portmanipulation"></a>
+<div class="grey_background">
+<div class="block">
+    <h3>
+        Port Manipulation
+    </h3>
+    <p>
+        Arduino: <a href="http://arduino.cc/en/Reference/PinMode">pinMode()</a> --- Atmel Datasheet: Section 14.4
+    </p>
+    
+    <div style="text-align: center;">
+     <figure>
+        <img src="../images/atmegapinImage.png">
+        <figcaption>Source: <a href="http://www.chicoree.fr/w/Arduino_sur_ATmega328P">http://www.chicoree.fr/w/Arduino_sur_ATmega328P</a></figcaption>
+    </figure>     
+    </div>
+    
+    <p><b>Syntax</b></p>
+    <hr>
+    <pre><code>DDR<span class="amber">x</span> = (1&lt;&lt;PD<span class="olive">n</span>);</code></pre>
+    <hr>
+    
+    <br>
+        
+    <p><b>Registers</b></p>
+    <hr>
+    <p>
+        DDR<span class="amber">x</span>: Port <span class="amber">x</span> Data Direction Register
+    </p>
+    <p>
+        PD<span class="olive">n</span>: AVR-C Library "shortcut" for pin number <span class="olive">n</span>
+    </p>
+    
+    <p class="amber">
+        x = PORT; A, B, C, or D
+    </p>
+    
+    <p class="olive">
+        n = Pin number; 0, 1, 2, 3, ect.
+    </p>
+    <hr>
+    
+    <br>
+        
+    <p><b>Explanation</b></p>    
+    <hr>    
+    <p>
+        Set pin to 1 for output; Set pin to 0 for input
+    </p>
+    <hr>
+    
+</div>
+<div class="clear"></div>
+</div>
+
+
+<a name="Fundamentals of Physics and Maths"></a>
+<div class="block">
+    <h3>
+        Digital Pin Output
+    </h3>
+    <p>
+        Arduino: <a href="http://arduino.cc/en/Reference/DigitalWrite">digitalWrite()</a> --- Atmel Datasheet: Section 14.4
+    </p>
+    
+    <p><b>Syntax</b></p>
+    <hr>
+    <pre><code>PORT<span class="amber">x</span> = (1&lt;&lt;PD<span class="olive">n</span>);</code></pre>
+    <hr>
+    
+    <br>
+        
+    <p><b>Registers</b></p>
+    <hr>
+    <p>
+        PORT<span class="amber">x</span>: Port <span class="amber">x</span> Data Register
+    </p>
+    <p>
+        PD<span class="olive">n</span>: AVR-C Library "shortcut" for pin number <span class="olive">n</span>
+    </p>
+    
+    <p class="amber">
+        x = PORT; A, B, C, or D
+    </p>
+    
+    <p class="olive">
+        n = Pin number; 0, 1, 2, 3, ect.
+    </p>
+    <hr>
+    
+    <br>
+        
+    <p><b>Explanation</b></p>    
+    <hr>    
+    <p>
+        Set pin to 1 for HIGH (5V on ATmega328p); Set pin to 0 for LOW (0V on ATmega328p)
+    </p>
+    <hr>
+    
+</div>
+<div class="clear"></div>
+
+<a name="digitalread"></a>
+<div class="grey_background">
+<div class="block">
+    <h3>
+        Digital Pin Input
+    </h3>
+    <p>
+        Arduino: <a href="http://arduino.cc/en/Reference/DigitalRead">digitalRead()</a> --- Atmel Datasheet: Section 14.4
+    </p>
+
+    
+    
+    <p><b>Syntax</b></p>
+    <hr>
+    <pre><code>if (PIN<span class="amber">x</span> & (1&lt;&lt;PD<span class="olive">n</span>));</code></pre>
+    <hr>
+    
+    <br>
+        
+    <p><b>Registers</b></p>
+    <hr>
+    <p>
+        PIN<span class="amber">x</span>: Port <span class="amber">x</span> Input Pins Address
+    </p>
+    
+    <p>
+        PD<span class="olive">n</span>: AVR-C Library "shortcut" for pin number <span class="olive">n</span>
+    </p>
+    
+    <p class="amber">
+        x = PORT; A, B, C, or D
+    </p>
+    
+    <p class="olive">
+        n = Pin number; 0, 1, 2, 3, ect.
+    </p>
+    <hr>
+    
+    <br>
+        
+    <p><b>Explanation</b></p>    
+    <hr>    
+    <p>
+        *Don't forget to turn on pull-up resistors if you need them!
+    </p>
+    
+    <p>
+        Will return 0 is pin is LOW; will return NOT 0 is pin is HIGH
+    </p>
+    <hr>
+</div>
+<div class="clear"></div>
+</div>
+
+<a name="Fundamentals of Physics and Maths"></a>
+<div class="block">
+    
+    <h3>
+        Analog Pin Input
+    </h3>
+    <p>
+        Arduino: <a href="http://arduino.cc/en/Reference/AnalogRead">analogRead()</a> --- Atmel Datasheet: Sections 24 and 14.4
+    </p>
+    
+    <p><b>Syntax (ADC initialize example)</b></p>
+    <hr>
+    <p><span class="crimson">//16Mhz / 128 = 125kHz ADC reference clock</span></p>
+    <pre class="amber"><code>ADCSRA |= ((1&lt;&lt;ADPS2)|(1&lt;&lt;ADPS1)|(1&lt;&lt;ADPS0));</code></pre>
+    
+    <p><span class="crimson">//Voltage reference from AVcc (5V on ATMega328p)</span></p>
+    <pre class="olive"><code>ADMUX |= (1&lt;&lt;REFS0); </code></pre>
+
+    <p><span class="crimson">//Turn on ADC</span></p>
+    <pre><code><span class="amber">ADCSRA</span> |= (1&lt;&lt;<span class="emerald">ADEN</span>);</code></pre>
+    
+    <p><span class="crimson">//Do a preliminary conversion</span></p>
+    <pre><code><span class="amber">ADCSRA</span> |= (1&lt;&lt;<span class="cyan">ADSC</span>);</code></pre>
+    
+    <hr>
+    
+    <br>
+    
+    <p><b>Syntax (ADC read example)</b></p>
+    <hr>
+    <p><span class="crimson">//Clear previously read channel</span></p>
+    <pre class="olive"><code>ADMUX &= 0xF0;</code></pre>
+    
+    <p><span class="crimson">//Define new ADC Channel to read (which analog pin: 0-5 on ATMega328p</span></p>
+    <pre class="olive"><code>ADMUX |= channel;</code></pre>
+
+    <p><span class="crimson">//New Conversion</span></p>
+    <pre><code><span class="amber">ADCSRA</span> |= (1&lt;&lt;<span class="cyan">ADSC</span>);</code></pre>
+    
+    <p><span class="crimson">//Do a preliminary conversion</span></p>
+    <pre><code><span class="amber">ADCSRA</span> |= (1&lt;&lt;<span class="cyan">ADSC</span>);</code></pre>
+    
+    <p><span class="crimson">//Wait until conversion is finished</span></p>
+    <pre><code>while(<span class="amber">ADCSRA</span> & (1&lt;&lt;<span class="cyan">ADSC</span>));</code></pre>
+    
+    <p><span class="crimson">//Return ADC value</span></p>
+    <pre><code>return <span class="taupe">ADCW</span>;</code></pre>
+    
+    <hr>
+    
+    <br>    
+    
+    
+        
+    <p><b>Registers</b></p>
+    <hr>
+    <div class="amber">
+    <p>
+        ADCSRA and ADCSRB: ADC Control and Status Registers A and B
+    </p>
+    
+    <p>
+        ADPS[2:0]: ADC Prescaler Select Bits
+    </p>
+    </div>
+    
+    <div class="olive">
+    <p>
+        ADMUX: ADC Multiplexer Selection Register
+    </p>
+    
+    <p>
+        REFS[1:0]: Voltage Reference Selection Bits
+    </p>
+    </div>
+    
+    <p class="emerald">
+        ADEN: ADC Enable
+    </p>
+    <p class="cyan">
+        ADSC: ADC Start Conversion
+    </p>
+    
+    <p class="taupe">
+        ADCW: "Shortcut" by AVR-C, holds ADV value
+    </p>
+    
+    <hr>
+    
+    <br>
+        
+    <p><b>Explanation</b></p>    
+    <hr>    
+    <p>
+        Analog read from Pins!
+    </p>
+    
+    <p>
+        It's dangerous to go alone, read <a href="http://hekilledmywire.wordpress.com/2011/03/16/using-the-adc-tutorial-part-5/">this</a>.
+    </p>
+    <hr>
+
+</div>
+<div class="clear"></div>
+
+</div>
+<footer>
+    <table>
+        <td>
+            <p><a href="mailto:jrejaud@gmail.com">Email me</a></p>    
+        </td>
+        <td>
+            <a href="https://twitter.com/JordanRejaud" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="false">Follow @JordanRejaud</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </td>
+    </table>
+</footer>
+
+</body>
+
+
+</div>
+</html>
