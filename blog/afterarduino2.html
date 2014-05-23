@@ -78,6 +78,8 @@
     <pre><code>DDR<span class="amber">x</span> |= (1&lt;&lt;PD<span class="olive">n</span>);</code></pre>
     <p><span class="crimson">//Set Pin for input</span></p>
     <pre><code>DDR<span class="amber">x</span> &= ~(1&lt;&lt;PD<span class="olive">n</span>);</code></pre>
+    <p><span class="crimson">//Set internal pull-up resistor (after setting Pin for input)</span></p>
+    <pre><code>PORT<span class="amber">x</span> |= (1&lt;&lt;PD<span class="olive">n</span>);</code></pre>
     <hr>
     
     <br>
