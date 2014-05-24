@@ -53,14 +53,11 @@
 </p>
 <hr>
 
-<a name="portmanipulation"></a>
+<a name="Port_Manipulation"></a>
 <div class="grey_background">
 <div class="block">
 <details>
 <summary>Port Manipulation</summary>
-<!--    <h3>
-        Port Manipulation
-    </h3>-->
     <p>
         Arduino: <a href="http://arduino.cc/en/Reference/PinMode">pinMode()</a> --- Atmel Datasheet: Section 14.4
     </p>
@@ -116,10 +113,10 @@
 </div>
 </details>
 
-<a name="Fundamentals of Physics and Maths"></a>
+<a name="Digital_Output"></a>
 <div class="block">
 <details>
-<summary>Digital Pin Output</summary>
+<summary>Digital Output</summary>
     <p>
         Arduino: <a href="http://arduino.cc/en/Reference/DigitalWrite">digitalWrite()</a> --- Atmel Datasheet: Section 14.4
     </p>
@@ -165,11 +162,11 @@
 <div class="clear"></div>
 </details>
 
-<a name="digitalread"></a>
+<a name="Digital_Input"></a>
 <div class="grey_background">
 <div class="block">
 <details>
-<summary>Digital Pin Input</summary>
+<summary>Digital Input</summary>
     <p>
         Arduino: <a href="http://arduino.cc/en/Reference/DigitalRead">digitalRead()</a> --- Atmel Datasheet: Section 14.4
     </p>
@@ -219,10 +216,10 @@
 </div>
 </details>
 
-<a name="Fundamentals of Physics and Maths"></a>
+<a name="Analog_Input"></a>
 <div class="block">
 <details>
-<summary>Analog Pin Input</summary>
+<summary>Analog Input</summary>
     <p>
         Arduino: <a href="http://arduino.cc/en/Reference/AnalogRead">analogRead()</a> --- Atmel Datasheet: Sections 24 and 14.4
     </p>
@@ -322,6 +319,142 @@
 </div>
 <div class="clear"></div>
 </details>
+
+<a name="Analog_Output"></a>
+<div class="grey_background">
+<div class="block">
+<details>
+<summary>Delay and Timers</summary>
+    <p>
+        Arduino: <a href="http://arduino.cc/en/Reference/delay">delay()</a> --- Atmel Datasheet: Sections 15, 16, and 18
+    </p>
+
+    <p><b>Syntax (Delay)</b></p>
+    <hr>
+    <p><span class="crimson">//Include delay .h</span></p>
+    <pre><code>#include &lt;util/delay.h&rt;</code></pre>
+    <p><span class="crimson">//Delay for delay_timer ms</span></p>
+    <pre><code>_delay_ms(delay_timer);</code></pre>
+    <hr>
+    
+    <br>
+    
+    <p><b>Syntax (CTC Timer initialize example)</b></p>
+    <hr>
+    <p><span class="crimson">//Set Prescaler (256 in this example)</span></p>
+    <pre class="amber"><code>TCCR<span class="cyan">i</span>B |= (1&lt;&lt;CS<span class="cyan">i</span>2);</code></pre>
+    
+    <p><span class="crimson">//Set timer to CTC mode</span></p>
+    <pre class="amber"><code>TCCR<span class="cyan">i</span>B |= <span class="olive">(1&lt;&lt;WGM<span class="cyan">i</span>2);</span> </code></pre>
+
+    <p><span class="crimson">//Set Target Timer Count</span></p>
+    <pre><code><span class="emerald">OCR<span class="cyan">i</span>A = Target Timer Count;</code></pre>
+    
+    <p><span class="crimson">//Enable Timer Interrupts</span></p>
+    <pre class="taupe"><code>TIMSK<span class="cyan">i</span> |= (1&lt;&lt;OCIE<span class="cyan">i</span>A);</code></pre>
+    
+    <p><span class="crimson">//Enable Global Interrupts</span></p>
+    <pre><code>sei();</code></pre>
+    <hr>
+    
+    <br>
+        
+        <p><b>Syntax (ISR example)</b></p>
+    <hr>
+    <p><span class="crimson">//Define ISR Function</span></p>
+    <pre><code>ISR(TIMER<span class="cyan">i</span>_COMPA_vect)</code></pre>
+    
+    <pre><code>{</code></pre>
+    
+    <p><span class="crimson">//Something happens here when you hit Target Period</span></p>
+    
+    <pre><code>}</code></pre>
+    
+    <hr>
+    
+    <br>
+        
+    <p><b>Registers</b></p>
+    <hr>
+    <p class="amber">
+        TCCR<span class="cyan">i</span>A: Timer/Counter Control Register A
+    </p>
+    <p class="amber">
+        TCCR<span class="cyan">i</span>B: Timer/Counter Control Register B
+    </p>
+    <p class="amber">
+        CS<span class="cyan">i</span>[2:0]: Clock Select
+    </p>
+    <p class="olive">
+        WGM<span class="cyan">i</span>[2:0]: Waveform Generation Mode
+    </p>
+    <p class="emerald">
+        OCR<span class="cyan">i</span>A: Output Compare Register A
+    </p>
+    <p class="emerald">
+        OCR<span class="cyan">i</span>B: Output Compare Register B
+    </p>
+    <p class="taupe">
+        TIMSK<span class="cyan">i</span>: Timer/Counter Interrupt Mask Register
+    </p>
+    <p class="taupe">
+        OCIE<span class="cyan">i</span>A: Timer/Counter0 Output Compare Match A Interrupt Enable
+    </p>
+        <p class="taupe">
+        OCIE<span class="cyan">i</span>B: Timer/Counter0 Output Compare Match B Interrupt Enable
+    </p>
+    
+    <p class="cyan">
+        i = Timer; 0, 1, 2 (on ATMega328p)
+    </p>
+    
+
+    <hr>
+    
+    <br>
+        
+    <p><b>Explanation/ Equations</b></p>    
+    <hr>    
+    <p>
+        Timer Frequency = System Clock Frequency / Prescaler
+    </p>
+    <p>
+        <span class="emerald">Target Timer Count</span> = Timer Frequency / Target Frequency - 1 = Target Period / Timer Period - 1
+    </p>
+    <p>
+        System Clock Settings: Section 9; Arduino Uno clock frequency is 16mHz.
+    </p>
+    <p>
+        Prescaler Settings:
+    </p>
+    <div style="text-align: center;">
+     <figure>
+        <img style="height: 300px;" src="../images/prescaleImage.png">
+        <figcaption>Table 15-9 of ATMega328p datasheet</a></figcaption>
+    </figure>     
+    </div>
+    <p>
+        Target Frequency = Frequency of PWM; Target Timer Count = What timer counter will "hit" after Target Period has been reached.
+    </p>
+    
+    <p>
+        Waveform Settings:
+    </p>
+    <div style="text-align: center;">
+     <figure>
+        <img style="height: 300px;" src="../images/waveImage.png">
+        <figcaption>Table 15-8 of ATMega328p datasheet</a></figcaption>
+    </figure>     
+    </div>
+    
+    
+    <hr>
+</div>
+<div class="clear"></div>
+</div>
+</details>
+
+
 
 </div>
 <footer>
