@@ -329,17 +329,52 @@
         Arduino: <a href="http://arduino.cc/en/Reference/delay">delay()</a> --- Atmel Datasheet: Sections 15, 16, and 18
     </p>
 
-    <p><b>Syntax (Delay)</b></p>
+    <details>
+    <summary class="crimson">Delay</summary>    
+    
+    <p><b>Syntax</b></p>
     <hr>
     <p><span class="crimson">//Include delay .h</span></p>
     <pre><code>#include &lt;util/delay.h&rt;</code></pre>
     <p><span class="crimson">//Delay for delay_timer ms</span></p>
     <pre><code>_delay_ms(delay_timer);</code></pre>
     <hr>
+    </details>
+
+    <br>
+        
+    <details>
+    <summary class="crimson">Normal Mode</summary>    
+        
+    <p><b>Syntax (Initialize example)</b></p>
+    <hr>
+    <p><span class="crimson">//Set Prescaler (256 in this example)</span></p>
+    <pre class="amber"><code>TCCR<span class="cyan">i</span>B |= (1&lt;&lt;CS<span class="cyan">i</span>2);</code></pre>
+    <hr>
+        
+    <br>
+    
+    <p><b>Syntax (Timer value)</b></p>
+    <hr>
+    <p><span class="crimson">//Set Prescaler (256 in this example)</span></p>
+    <pre class="amber"><code>if (TCNT<span class="cyan">i</span> >= <span class="emerald">Target Timer Count</span>)</code></pre>
+    <pre><code>{</code></pre>
+    <p><span class="crimson">//Something happens here when you hit Target Timer Count</span></p>
+    <p><span class="crimson">//Reset Timer</span></p>
+    <pre><code>TCNT<span class="cyan">i</span> = 0;</code></pre>
+    <p><span class="crimson">//Disable Timer (Haven't tested this yet)</span></p>
+    <pre class="amber"><code>TCCR<span class="cyan">i</span>B &= ~((1&lt;&lt;CS<span class="cyan">i</span>0)|(1&lt;&lt;CS<span class="cyan">i</span>1)|(1&lt;&lt;CS<span class="cyan">i</span>2));</code></pre>
+    <pre><code>}</code></pre>
+    <hr>
+        
+    </details>
     
     <br>
     
-    <p><b>Syntax (CTC Timer initialize example)</b></p>
+    <details>
+    <summary class="crimson">CTC Mode (clear timer on counter match)</summary>    
+    
+    <p><b>Syntax (Initialize example)</b></p>
     <hr>
     <p><span class="crimson">//Set Prescaler (256 in this example)</span></p>
     <pre class="amber"><code>TCCR<span class="cyan">i</span>B |= (1&lt;&lt;CS<span class="cyan">i</span>2);</code></pre>
@@ -359,18 +394,18 @@
     
     <br>
         
-        <p><b>Syntax (ISR example)</b></p>
+    <p><b>Syntax (ISR example)</b></p>
     <hr>
     <p><span class="crimson">//Define ISR Function</span></p>
     <pre><code>ISR(TIMER<span class="cyan">i</span>_COMPA_vect)</code></pre>
     
     <pre><code>{</code></pre>
     
-    <p><span class="crimson">//Something happens here when you hit Target Period</span></p>
+    <p><span class="crimson">//Something happens here when you hit Target Timer Count</span></p>
     
     <pre><code>}</code></pre>
-    
     <hr>
+    </details>
     
     <br>
         
@@ -381,6 +416,9 @@
     </p>
     <p class="amber">
         TCCR<span class="cyan">i</span>B: Timer/Counter Control Register B
+    </p>
+    <p class="amber">
+        TCNT<span class="cyan">i</span>: Timer/Counter Register
     </p>
     <p class="amber">
         CS<span class="cyan">i</span>[2:0]: Clock Select
