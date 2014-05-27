@@ -46,7 +46,7 @@ ul li
 ul li a
 {
     line-height: 1.4;
-    font-size: 30px; /* 23 originally */
+    font-size: 35px; /* 23 originally */
     display: block;
     float: left;
     max-height: 500px;
