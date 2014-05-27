@@ -29,7 +29,7 @@ nav
 }
 ul
 {
-    width: 930px; /*Sum of all widths */
+    width: 1020px; /*Sum of all widths */
 }
 ul li a
 {
@@ -38,5 +38,5 @@ ul li a
 }
 .cvnav
 {
-    width: 250px;
+    width: 340px;
 }
