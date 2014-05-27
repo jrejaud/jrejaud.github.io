@@ -1,6 +1,7 @@
 /* Format.Css
  * Written by Jordan Rejaud */
 
+/* Fonts */
 @font-face
 {
     font-family: WeblySleekUI;
@@ -11,22 +12,14 @@
     font-family: LearningCurve;
     src: url(../fonts/LearningCurve.ttf)
 }
-a
-{
-   text-decoration: none; 
-}
-a:link
-{
-    color: #7C7A77;  /* Light Grey */
-}
-a:visited
-{
-    color: #7C7A77;  /* Light Grey */
-}
-a:hover
-{
-    color: #FFFFFF; /* White Text */ 
-}
+
+
+/* Links */
+a { text-decoration: none; }
+a:link { color: #7C7A77; } /* Light Grey */
+a:visited { color: #7C7A77; }
+a:hover { color: #FFFFFF; }
+
 /* Nav Bar */
 nav
 {
@@ -85,18 +78,20 @@ table.learningtable img
     vertical-align: middle;
 }
 
+
+
 body
 {
     margin-left:0px;
     margin-right:0px;
     margin-bottom:5px; /* hacks for footer */
     background-color:  #121211; /* Light Grey Background */
-    /*background-color: #121211; Light Grey Background */
     color: #FFFFFF; /* White Text */
 }
 
 
-/* hacks */
+
+/* Footer hacks */
 html {
     position: relative;
     min-height: 100%;
@@ -122,22 +117,40 @@ footer table td {
     vertical-align: middle;
 }
 
+
+/* Paragraphs and Headers */
+p
+{
+    line-height: 1.4;
+    font-size: 23px;
+    margin-left: 15px;
+}
+p img
+{
+    float: left;
+    height:360px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+}
+pre
+{
+    line-height: 1.4;
+    font-size: 23px;
+    margin-left: 15px;
+}
 h1
 {
     color: #56C5FF; /* Blue Text */
     margin-left: 15px;
     font-size: 35px;
 }
-summary
+h1 img
 {
-    color: #56C5FF; /* Blue Text */
-    margin-left: 15px;
-    font-size: 30px;
-    line-height: 1.4;
-}
-summary:hover
-{
-    color: #FFFFFF; /* White Text */
+    height:300px;
+    float: left;
+    margin-right: 25px;
+    margin-bottom: 10px;
+    margin-left:5px;
 }
 h2
 {
@@ -146,6 +159,51 @@ h2
     line-height: 1.4;
     font-size: 30px;
 }
+
+h2 a
+{
+    color: #56C5FF; /* Blue Text */
+    margin-left: 15px;
+    line-height: 1.4;
+}
+
+
+h2 img
+{
+    height:150px;
+    float: left;
+    margin:15px;
+}
+h3 
+{
+    color: #56C5FF; /* Blue Text */
+    margin-left: 40px;
+    line-height: 1.4;
+    font-size: 24px;
+}
+li
+{
+    font-size: 23px;
+    line-height: 1.4;
+}
+figcaption
+{
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Summary and details */
+summary
+{
+    margin-left: 15px;
+    font-size: 30px;
+    line-height: 1.4;
+}
+summary:hover
+{
+    color: #FFFFFF; /* White Text */
+}
+
 .cvlist
 {
     font-size: 225%;
@@ -165,27 +223,7 @@ h2
 {
     margin-bottom: 40px;
 }
-h2 a
-{
-    color: #56C5FF; /* Blue Text */
-    margin-left: 15px;
-    line-height: 1.4;
-}
 
-h1 img
-{
-    height:300px;
-    float: left;
-    margin-right: 25px;
-    margin-bottom: 10px;
-    margin-left:5px;
-}
-h2 img
-{
-    height:150px;
-    float: left;
-    margin:15px;
-}
 .cvimage
 {
     height:150px;
@@ -202,43 +240,7 @@ h2 img
     margin-right: 25px;
     margin-bot: 0px;
 }
-h3
-{
-    color: #56C5FF; /* Blue Text */
-    margin-left: 40px;
-    line-height: 1.4;
-    font-size: 24px;
-}
-p
-{
-    line-height: 1.4;
-    font-size: 23px;
-    margin-left: 15px;
-}
-pre
-{
-    line-height: 1.4;
-    font-size: 23px;
-    margin-left: 15px;
-}
-li
-{
-    font-size: 23px;
-    line-height: 1.4;
-}
-figcaption
-{
-    font-size: 20px;
-    line-height: 1.4;
-}
-p img
-{
-    float: left;
-    height:360px;
-    margin-right: 25px;
-    margin-bottom: 25px;
-}
-/* iframe (for Youtube Videos) */
+
 .ytvideo
 {
     float: left;
@@ -267,41 +269,15 @@ p img
     margin-right: 8%;
 }
 
-/* Color Classes */
-.olive
-{
-    color: #6D8764;
-}
-.cyan
-{
-    color: #1BA1E2;
-}
-.crimson
-{
-    color: #A20025; 
-}
-.emerald
-{
-    color: #008A00;
-}
-.amber
-{
-    color: #F0A30A;
-}
-.taupe
-{
-    color: #87794E;
-}
-.indigo
-{
-    color: #6A00FF;
-}
-.grey_background
-{
-    background-color: #222326;
-}
 
-div h2.white
-{
-    color: #FFFFFF;
-}
+/* Color Classes */
+.olive { color: #6D8764; }
+.cyan { color: #1BA1E2; }
+.crimson { color: #A20025; }
+.emerald { color: #008A00; }
+.amber { color: #F0A30A; }
+.taupe { color: #87794E; }
+.indigo { color: #6A00FF;}
+
+/* Background Color Classes */
+.grey_background { background-color: #222326; }
