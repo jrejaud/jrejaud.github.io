@@ -40,3 +40,12 @@ ul li a
 {
     width: 300px;
 }
+
+.learning_block
+{
+    width: 50%;
+    float: left;
+    text-align: center;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
