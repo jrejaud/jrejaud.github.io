@@ -8,6 +8,21 @@
     margin-right: 2%;
 }
 
+p
+{
+    font-size: 26px;
+}
+
+h2
+{
+    font-size: 35px;
+}
+
+h3
+{
+    font-size: 28px;
+}
+
 .medium_clear
 {
     width: 100%;
