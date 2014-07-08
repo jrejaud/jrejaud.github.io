@@ -287,6 +287,18 @@ summary:hover
     margin-right: 8%;
 }
 
+.efiimages
+{
+    text-align: center;
+}
+
+
+div.efiimages img
+{
+    height: 500px;
+}
+
+
 
 /* Color Classes */
 .olive { color: #6D8764; }
