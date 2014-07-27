@@ -10,17 +10,17 @@
 
 p
 {
-    font-size: 26px;
+    font-size: 28px;
 }
 
 h2
 {
-    font-size: 35px;
+    font-size: 39px;
 }
 
 h3
 {
-    font-size: 28px;
+    font-size: 32px;
 }
 
 .medium_clear
@@ -48,7 +48,7 @@ ul
 }
 ul li a
 {
-    font-size: 35px; /* 23 originally */
+    font-size: 38px; /* 23 originally */
     width: 170px; /* 200 originally */
 }
 .cvnav
