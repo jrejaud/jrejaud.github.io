@@ -18,9 +18,28 @@ h2
     font-size: 39px;
 }
 
+.abouttext
+{
+    margin-left:0px;
+}
+.grey_background p {margin-left: auto;
+		    margin-right: auto;
+		    text-align: justify;}
+
+.darkgrey_background p {margin-left: auto;
+		    margin-right: auto;
+		    text-align: justify;}
+
 h3
 {
     font-size: 32px;
+}
+
+
+.topblock img
+{
+    height:250px;
+    margin-top: 10px;
 }
 
 .medium_clear

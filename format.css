@@ -1,6 +1,10 @@
 /* Format.Css
  * Written by Jordan Rejaud */
 
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+body,h2{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+
 /* Fonts */
 @font-face
 {
@@ -23,10 +27,14 @@ a:hover { color: #FFFFFF; }
 /* Nav Bar */
 nav
 {
+    background-color: rgb(26,26,26);
     width: 100%;
-    height: 50px;
+    height: 60px; /* originally 50px */
     margin: 0;
     padding: 0;
+    padding-bottom: 35px;
+    padding-top: 15px;
+    border-bottom: solid 6px rgb(255,200,12);
 }
 ul
 {
@@ -43,14 +51,15 @@ ul li
 }
 ul li a
 {
-    line-height: 1.4;
-    font-size: 23px;
+    line-height: 1.6;
+    font-size: 30px;
     display: block;
     float: left;
     max-height: 500px;
     width: 200px;
     margin: 0;
     padding: 5px 0;
+    padding-top:30px; /* Originally 0 */
     text-align: center;
     color: #FFFFFF;
 }
@@ -102,18 +111,34 @@ img.small_image
 }
 
 
-
-
 body
 {
     margin-left:0px;
     margin-right:0px;
     margin-bottom:5px; /* hacks for footer */
-    background-color:  #121211; /* Light Grey Background */
+    background-color: #DCDCDC; /* #121211; Light Grey Background */
     color: #FFFFFF; /* White Text */
 }
+.topblock
+{
+    margin-top: 40px;
+    color: #000000;
+}
+.topblock h1
+{
+    font-size: 275%;
+    color: rgb(103,33,122);
+}
 
-
+.abouttext
+{
+    margin-left:500px;
+}
+.topblock img
+{
+    height:450px;
+    margin-top: 145px;
+}
 
 /* Footer hacks */
 html {
@@ -145,9 +170,9 @@ footer table td {
 /* Paragraphs and Headers */
 p
 {
-    line-height: 1.4;
+    line-height: 1.6;
     font-size: 23px;
-    margin-left: 15px;
+    color: rgb(0,0,0);
 }
 p img
 {
@@ -178,15 +203,13 @@ h1 img
 }
 h2
 {
-    color: #56C5FF; /* Blue Text */
-    margin-left: 40px;
     line-height: 1.4;
     font-size: 30px;
+    color: rgb(18,126,17);
 }
 
 h2 a
 {
-    color: #56C5FF; /* Blue Text */
     margin-left: 15px;
     line-height: 1.4;
 }
@@ -222,9 +245,9 @@ summary:hover
     color: #FFFFFF; /* White Text */
 }
 
-.cvlist
+.cvnav
 {
-    font-size: 225%;
+    width: 250px;
 }
 .blog_entry
 {
@@ -242,21 +265,14 @@ summary:hover
     margin-bottom: 40px;
 }
 
-.cvimage
-{
-    height:150px;
-    float: left;
-    margin:15px;
-    margin-right:25px;
-}
 .lessonimage
 {
-    height:75px;
+    height:85px;
     float: left;
-    margin-top: 15px;
-    margin-left:15px;
-    margin-right: 25px;
-    margin-bot: 0px;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 35px;
+    padding-bottom: 15px;
 }
 
 .ytvideo
@@ -276,15 +292,31 @@ summary:hover
 }
 .block
 {
-   margin-left: 5%;
-   margin-right: 5%;
-   margin-bottom: 25px;
-   margin-top: 10px;
+
+   margin-top: 15px;
+   margin-bottom: 15px;
+   padding-top: 2%;
+   padding-bottom: 2%;
+   padding-left: 25px;
+   padding-right: 25px;
+   /* margin-bottom: 25px; */
+   /* margin-top: 10px; */
+}
+.block h2
+{
+    text-align: center;
+}
+.block h3
+{
+    color: rgb(18,126,17);
 }
 .margins
 {
-    margin-left: 8%;
-    margin-right: 8%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1400px;
+    /* margin-left: 8%;
+    margin-right: 8%; */
 }
 
 .efiimages
@@ -298,7 +330,11 @@ div.efiimages img
     height: 500px;
 }
 
-
+.footer
+{
+    text-align: center;
+    font-size: 75%;
+}
 
 /* Color Classes */
 .olive { color: #6D8764; }
@@ -308,6 +344,38 @@ div.efiimages img
 .amber { color: #F0A30A; }
 .taupe { color: #87794E; }
 .indigo { color: #6A00FF;}
+.bluetext {color: #56C5FF;}
+
+    
+.projectblock p {margin-left: 665px;
+		  text-align: justify;}
+
+.cvblock p {margin-left: 300px;
+	    margin-right: 50px;
+	    text-align: center;}
+
+.cvlist
+{
+    font-size: 225%;
+    margin-top: 35px;
+    margin-bottom: 25px;
+    color: rgb(0,155,198);
+}
+
+.cvimage
+{
+    height:150px;
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+}
 
 /* Background Color Classes */
-.grey_background { background-color: #222326; }
+/*.grey_background { background: rgb(63,173,255); }} */
+/*.grey_background p {color: rgb(0,0,0);}
+.grey_background h2 {color: rgb(0,0,0);}
+/*#222326; 
+/*.darkgrey_background { background-color: rgb(18,126,17); }
+.darkgrey_background h2 color: rgb(0,0,0);}
+.darkgrey_background p {color: rgb(0,0,0);}*/
+/*background-color: #121211;} */
