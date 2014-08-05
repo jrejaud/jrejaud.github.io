@@ -59,7 +59,7 @@ h3
 /* Nav Bar */
 nav
 {
-    height: 75px; /* Originally 50 */
+    height: 500px; /* Originally 50 */
 }
 ul
 {
@@ -67,12 +67,14 @@ ul
 }
 ul li a
 {
+    float: left;
+    clear:left;
     font-size: 38px; /* 23 originally */
-    width: 170px; /* 200 originally */
+    width: 100% /* 200 originally */
 }
 .cvnav
 {
-    width: 300px;
+    width: 100%
 }
 
 .learning_block
