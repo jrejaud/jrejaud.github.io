@@ -59,7 +59,7 @@ h3
 /* Nav Bar */
 nav
 {
-    height: 500px; /* Originally 50 */
+    height: 555px; /* Originally 50 */
 }
 ul
 {
@@ -69,7 +69,7 @@ ul li a
 {
     float: left;
     clear:left;
-    font-size: 38px; /* 23 originally */
+    font-size: 45px; /* 23 originally */
     width: 100% /* 200 originally */
 }
 .cvnav
