@@ -8,14 +8,19 @@
     margin-right: 30px;
 }
 
-p
+/*p
 {
-    font-size: 25px; /* 28*/
-}
+    font-size: 25px; /* 28
+}*/
 
 h2
 {
     font-size: 39px;
+}
+
+h3
+{
+    font-size: 32px;
 }
 
 .abouttext
@@ -29,11 +34,6 @@ h2
 .darkgrey_background p {margin-left: auto;
 		    margin-right: auto;
 		    text-align: justify;}
-
-h3
-{
-    font-size: 32px;
-}
 
 
 .topblock img
