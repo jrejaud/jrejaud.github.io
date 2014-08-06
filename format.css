@@ -26,7 +26,7 @@ body,h2{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;pa
 a { text-decoration: none; }
 a:link { color: #7C7A77; } /* Light Grey */
 a:visited { color: #7C7A77; }
-a:hover { color: #FFFFFF; }
+a:hover { color: #67217A; }
 
 /* Nav Bar */
 nav
@@ -368,14 +368,32 @@ div.efiimages img
     color: rgb(0,155,198);
 }
 
-.cvimage
-{
-    height:150px;
-    float: left;
-    margin-left: 20px;
-    margin-right: 20px;
+.cvimagebox img {
+    display: block;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
 }
 
+.cvimagebox
+{
+    height:300px;
+    width:300px;
+    min-width: 300px;
+    float: left
+}
+.resumelist h2
+{
+    padding-left: 15px;
+}
+.bloglist a {
+    line-height: 2;
+}
+.resumelist p
+{
+    margin-left: 35px;
+}
 /* Background Color Classes */
 /*.grey_background { background: rgb(63,173,255); }} */
 /*.grey_background p {color: rgb(0,0,0);}
