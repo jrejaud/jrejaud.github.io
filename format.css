@@ -124,11 +124,11 @@ body
     margin-top: 40px;
     color: #000000;
 }
-.topblock h1
+/*.topblock h1
 {
     font-size: 275%;
     color: rgb(103,33,122);
-}
+}*/
 
 .abouttext
 {
@@ -189,9 +189,9 @@ pre
 }
 h1
 {
-    color: #56C5FF; /* Blue Text */
     margin-left: 15px;
     font-size: 35px;
+    color: rgb(103,33,122);
 }
 h1 img
 {
