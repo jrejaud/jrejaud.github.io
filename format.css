@@ -16,7 +16,11 @@ body,h2{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;pa
     font-family: LearningCurve;
     src: url(../fonts/LearningCurve.ttf)
 }
-
+@font-face
+{
+    font-family: WeblySleekUIBOLD;
+    src: url(fonts/weblysleekuisb.ttf);
+}
 
 /* Links */
 a { text-decoration: none; }
@@ -189,6 +193,7 @@ pre
 }
 h1
 {
+    font-family: WeblySleekUIBOLD;
     margin-left: 15px;
     font-size: 35px;
     color: rgb(103,33,122);
