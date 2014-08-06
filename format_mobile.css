@@ -4,8 +4,8 @@
 /* No side margins! */
 .margins
 {
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 p
