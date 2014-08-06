@@ -9,7 +9,7 @@ body,h2{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;pa
 @font-face
 {
     font-family: WeblySleekUI;
-    src: url(fonts/weblysleekuil.ttf);
+    src: url(fonts/weblysleekuisl.ttf);
 }
 @font-face
 {
@@ -116,7 +116,7 @@ body
     margin-left:0px;
     margin-right:0px;
     margin-bottom:5px; /* hacks for footer */
-    background-color: #DCDCDC; /* #121211; Light Grey Background */
+    background-color: rgb(245,245,245);/*#DCDCDC;  #121211; Light Grey Background */
     color: #FFFFFF; /* White Text */
 }
 .topblock
