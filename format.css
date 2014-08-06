@@ -193,8 +193,8 @@ pre
 }
 h1
 {
-    font-family: WeblySleekUIBOLD;
     margin-left: 15px;
+    line-height: 1.6;
     font-size: 35px;
     color: rgb(103,33,122);
 }
