@@ -195,7 +195,8 @@ h1
 {
     margin-left: 15px;
     line-height: 1.6;
-    font-size: 35px;
+    /*font-size: 35px;*/
+    font-size: 225%;
     color: rgb(103,33,122);
 }
 h1 img
