@@ -179,6 +179,10 @@ footer table td {
     padding-right: 15px;
     vertical-align: middle;
 }
+footer table td p
+{
+    color: #7C7A77;
+}
  /*   height: 300px;
     border: none;
     vertical-align: middle;
