@@ -72,6 +72,14 @@ ul li a
     font-size: 45px; /* 23 originally */
     width: 100% /* 200 originally */
 }
+
+footer
+{
+    height: 555px; /* Originally 50 */
+}
+
+
+
 .cvnav
 {
     width: 100%
