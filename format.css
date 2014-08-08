@@ -310,11 +310,19 @@ summary:hover
 
 .ytvideo
 {
+    vertical-align: middle;
+    margin-top: 77px;
     float: left;
     margin-right: 25px;
     margin-bottom: 15px;
     width: 640px;
     height: 360px;    
+}
+.ytvideo img
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 .clear
 {
