@@ -202,7 +202,7 @@ footer table td p
 p
 {
     line-height: 1.6;
-    font-size: 23px;
+    font-size: 27px;
     color: rgb(0,0,0);
 }
 p img
@@ -223,7 +223,7 @@ h1
     margin-left: 15px;
     line-height: 1.6;
     /*font-size: 35px;*/
-    font-size: 45px;
+    font-size: 47px;
     color: rgb(103,33,122);
 }
 h1 img
@@ -237,7 +237,7 @@ h1 img
 h2
 {
     line-height: 1.4;
-    font-size: 30px;
+    font-size: 35px;
     color: rgb(18,126,17);
 }
 
@@ -252,7 +252,7 @@ h3
     color: #56C5FF; /* Blue Text */
     margin-left: 40px;
     line-height: 1.4;
-    font-size: 24px;
+    font-size: 28px;
 }
 li
 {
