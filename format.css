@@ -28,6 +28,14 @@ a:link { color: #7C7A77; } /* Light Grey */
 a:visited { color: #7C7A77; }
 a:hover { color: #67217A; }
 
+p a:link { color: #1C4898;}
+p a:visited { color: #1C4898;}
+p a:hover { color: #67217A; }
+
+td a:link { color: #FFFFFF;}
+td a:visited { color: #FFFFFF;}
+td a:hover { color: #67217A; }
+
 /* Nav Bar */
 nav
 {
@@ -215,7 +223,7 @@ h1
     margin-left: 15px;
     line-height: 1.6;
     /*font-size: 35px;*/
-    font-size: 225%;
+    font-size: 45px;
     color: rgb(103,33,122);
 }
 h1 img
