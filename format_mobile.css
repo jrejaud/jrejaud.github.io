@@ -58,11 +58,14 @@ h3
     margin-left: auto;
     margin-right: auto;
 }
-
+.websitepicture
+{
+    width: 90%;
+}
 /* Nav Bar */
 nav
 {
-    height: 555px; /* Originally 50 */
+    height: 625px; /* Originally 5555 */
 }
 ul
 {
