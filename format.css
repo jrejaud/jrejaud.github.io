@@ -72,7 +72,7 @@ ul li
 ul li a
 {
     line-height: 1.6;
-    font-size: 2em; /* old: 30px; */
+    font-size: 30px;
     display: block;
     float: left;
     max-height: 500px;
@@ -217,7 +217,7 @@ footer table td p
 p
 {
     line-height: 1.6;
-    font-size: 1.5em; /*23px;*/
+    font-size: 23px;
     color: rgb(0,0,0);
 }
 p img
@@ -230,7 +230,7 @@ p img
 pre
 {
     line-height: 1.4;
-    font-size: 1.5em; /*23px;*/
+    font-size: 23px;
     margin-left: 15px;
     color: rgb(0,0,0);
 }
@@ -239,7 +239,7 @@ h1
     margin-left: 15px;
     line-height: 1.6;
     /*font-size: 35px;*/
-    font-size: 3em; /*45px;*/
+    font-size: 45px;
     color: rgb(103,33,122);
 }
 h1 img
@@ -253,7 +253,7 @@ h1 img
 h2
 {
     line-height: 1.4;
-    font-size: 2.5em; /*30px;*/
+    font-size: 30px;
     color: rgb(18,126,17);
 }
 
@@ -268,16 +268,16 @@ h3
     color: #56C5FF; /* Blue Text */
     margin-left: 40px;
     line-height: 1.4;
-    font-size: 2em; /*24px;*/
+    font-size: 24px;
 }
 li
 {
-    font-size: 1.5em; /*20px;*/
+    font-size: 23px;
     line-height: 1.4;
 }
 figcaption
 {
-    font-size: 1.5em; /*20px;*/
+    font-size: 20px;
     line-height: 1.4;
 }
 
@@ -286,7 +286,7 @@ summary
 {
     color: #56C5FF; /* Blue Text */
     margin-left: 15px;
-    font-size: 2em; /*30px;*/
+    font-size: 30px;
     line-height: 1.4;
 }
 summary:hover
@@ -418,7 +418,7 @@ div.efiimages img
 .footer
 {
     text-align: center;
-    font-size: 1.5em /*75%;*/
+    font-size: 75%;
 }
 
 /* Color Classes */
@@ -441,7 +441,7 @@ div.efiimages img
 
 .cvlist
 {
-    font-size: 1.5em; /*225%;*/
+    font-size: 225%;
     margin-top: 35px;
     margin-bottom: 25px;
     color: rgb(0,155,198);
