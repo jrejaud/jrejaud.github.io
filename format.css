@@ -72,7 +72,8 @@ ul li
 ul li a
 {
     line-height: 1.6;
-    font-size: 30px;
+    /*font-size: 30px;*/
+	font-size: 24px;
     display: block;
     float: left;
     max-height: 500px;
@@ -163,8 +164,8 @@ body
 }
 .topblock img
 {
-    height:450px;
-    margin-top: 145px;
+    height:425px;
+    margin-top: 35px;
 }
 
 /* Footer hacks */
@@ -217,7 +218,8 @@ footer table td p
 p
 {
     line-height: 1.6;
-    font-size: 23px;
+	/*font-size: 23px;*/
+    font-size: 16px;
     color: rgb(0,0,0);
 }
 p img
@@ -239,7 +241,8 @@ h1
     margin-left: 15px;
     line-height: 1.6;
     /*font-size: 35px;*/
-    font-size: 45px;
+	/*font-size: 45px;*/
+    font-size: 28px;
     color: rgb(103,33,122);
 }
 h1 img
@@ -253,7 +256,7 @@ h1 img
 h2
 {
     line-height: 1.4;
-    font-size: 30px;
+    font-size: 24px;
     color: rgb(18,126,17);
 }
 
@@ -268,11 +271,11 @@ h3
     color: #56C5FF; /* Blue Text */
     margin-left: 40px;
     line-height: 1.4;
-    font-size: 24px;
+    font-size: 20px;
 }
 li
 {
-    font-size: 23px;
+    font-size: 20px;
     line-height: 1.4;
 }
 figcaption
@@ -286,7 +289,7 @@ summary
 {
     color: #56C5FF; /* Blue Text */
     margin-left: 15px;
-    font-size: 30px;
+    font-size: 20px;
     line-height: 1.4;
 }
 summary:hover
