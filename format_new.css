@@ -1,0 +1,53 @@
+/* Format.Css
+ * Written by Jordan Rejaud */
+
+/* Fonts and Colors */
+h1 {
+    color: rgb(103,33,122);
+}
+
+
+/*Navbar */
+.navbar-image {
+    height: 65px;
+}
+
+
+/*Main Information*/
+.panel-heading {
+    background: none;    
+}
+
+/*Resume*/
+.edu_image {
+    vertical-align: middle;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.edu_image_holder {
+    padding-top: 27px;
+    padding-bottom: 27px;
+    vertical-align: middle;
+    display: inline-block;
+    height: 100%;
+}
+
+/*Academic Projects*/
+.ytvideo
+{
+    vertical-align: middle;
+    width: 640px;
+    height: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+}
+
+
+
+.clear
+{
+    clear:both;
+}
