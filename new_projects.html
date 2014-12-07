@@ -25,7 +25,7 @@
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
         
-    <link href="lightbox/bootstrap-lightbox.css" rel="stylesheet">
+    <link href="lightbox/bootstrap-lightbox.min.css" rel="stylesheet">
         
     <script src="lightbox/bootstrap-lightbox.js"></script>
      
@@ -70,11 +70,10 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Curriculum Vitae</a></li>
-            <li><a href="#about">Projects</a></li>
-            <li><a href="#contact">Apps</a></li>
+            <li><a href="#">Curriculum Vitae</a></li>
+            <li class="active"><a href="#about">Engineering Projects</a></li>
+            <li><a href="https://play.google.com/store/apps/developer?id=Jordan%20Rejaud&hl=en">Android Apps</a></li>
             <li><a href="#contact">Learning</a></li>
-            <li><a href="#contact">Design</a></li>
             <li><a href="#contact">Blog</a></li>
           </ul>
         </div><!--/.nav-collapse -->
@@ -84,30 +83,22 @@
     <div class="container">
         
         <div class="page-header">
-            <h1>Academic Projects</h1>
-            <h1><small>Engineering: It's like minecraft but irl</small></h1>
+            <h1>Engineering Projects</h1>
+            <h1><small>Engineering: It's like minecraft but IRL</small></h1>
         </div>
         
     </div>
-    
-    
-    <div class="container">      
+     
+    <div class="container">
+        <div class="col-md-12">
+        
         <div class="row">
-            <div class="col-md-12">
-                <div class="row">
-                <div class="col-md-7 col-xs-12">
-                    <a data-toggle="lightbox" href="#demoLightbox">Open Lightbox</a>
+                <div class="col-md-6 col-xs-12 project_block">
+                    <div class="project_image_holder">
+                        <img class="img-responsive" src="images/robot_gif.gif">
+                        <h3>Robotic Prosthetic Arm</h3>
+                    </div>
                     
-                    <div id="demoLightbox" class="lightbox hide fade"  tabindex="-1" role="dialog" aria-hidden="true">
-                        <div class='lightbox-content'>
-                            <iframe width="640" height="360"  src="//www.youtube.com/embed/Mqmlf6NhmIQ?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
-                            <div class="lightbox-caption"><p>Your caption here</p></div>
-                        </div>
-                    </div>  
-                </div>
-            
-                <div class="col-md-5 col-xs-12">
-                    <h3>Robotic Prosthetic Arm</h3>
                             <p>
                                 For a class project, the entire class had to collaborate and build a 6 degree of freedom robotic prosthetic arm.
                             </p>
@@ -127,13 +118,183 @@
                             <p>
                                The arm is controlled by motors on the back (not seen in the picture) and could ostensibly grab an object the size of a soda can. <a href="https://www.youtube.com/watch?v=e53UZG6arjE">Song Credits</a>
                             </p>
+                            <hr>
                 </div>
+                <div class="col-md-6 col-xs-12 project_block">
+                    <div class="project_image_holder">
+                        <img class="img-responsive" src="images/airplane.gif">
+                        <h3>Propeller Airplane</h3>
+                    </div>
+                        <p>
+                            Capstone project for my Aerospace Engineering Minor at Lehigh University was to build an aircraft.
+                        </p>
+                        <p>
+                            This roadable aircraft can also drive around on the ground. It is build primarely out of wood with foam wings and metal struts to support the wings.
+                        </p>
+                        <p>
+                            This plane had two motors inside it (one to power the prop and one to power the front wheels)
+                        </p>
+                        <p>
+                            It flew very successfully on the second attempt. The first time, <del>I</del> we forgot to balance the weight of the aircraft properly and it crashed nose first after ~a minute.
+                        </p>
+                        <p>
+                            So we built a second one two days before the deadline. The initial plane had taken a few months to make. Only time that I ever pulled an all-nighter for school.
+                        </p>
+                        <p>
+                            I had a lot of fun building this plane and kept the schematics so I could build another one in the future.
+                        </p>
+                        <hr>
+                </div>   
+        </div>
+        
+        <div class="row">
+                <div class="col-md-6 col-xs-12 project_block">
+                    <div class="project_image_holder">
+                        <img class="img-responsive" src="images/frisbee.gif">
+                        <h3>Automatic Frisbee Launcher</h3>
+                    </div>
+                            <p>
+                                Automatic Targeting Frisbee Launcher. This machine uses a camera to automatically aim for the colored target that you selected.
+                            </p>
+                            <p>
+                                It uses a very powerful DC motor to induce linear and rotational motion of the frisbees and shoot them at the target.
+                            </p>
+                            <p>
+                                A servo motor ostensibly pushed the little frisbees out of the <del>dirty tin coffee can</del> frisbee containment tower and towards the DC motor.
+                            </p>
+                            <p>
+                                A planetary gear is used to line up the launcher horizontally and a linear actuator lines it up vertically.
+                            </p>
+                            <p>
+                                I did a little of the code but mostly worked on the body and mechanics.
+                            </p>
+                            <hr>
                 </div>
-            </div>
+            
+            
+                <div class="col-md-6 col-xs-12 project_block">
+                    <div class="project_image_holder">
+                        <img class="img-responsive" src="images/museum.gif">
+                        <h3>Phenakistoscope</h3>
+                    </div>
+                        <p>
+                            For my Systems Engineering course, my team and I built a <a href="http://en.wikipedia.org/wiki/Phenakistoscope">Phenakistoscope</a> for the <a href="https://pittsburghkids.org/">Pittsburgh's Childrens' Museum</a>.
+                        </p>
+                        <p>
+                            Basically, press a bunch of buttons and a very pretty circle will appear.
+                        </p>
+                        <p>
+                            Smash buttons and spin the wheel to change the color and size of the circles.
+                        </p>
+                        <hr>
+                </div>
+                
+        </div>
+        
+        <div class="row">
+                <div class="col-md-6 col-xs-12 project_block">
+                    <div class="project_image_holder">
+                        <img class="img-responsive" src="images/holo.gif">
+                        <h3>3D Hologram Generator</h3>
+                    </div>
+                        <p>
+                            By using a Microsoft Kinect and an LED Cube, you can point the camera at a very crude object and recreate it in 3D space!
+                        </p>
+                        
+                        <p>
+                            The resolution of your created object is limited by the number of <a href="http://en.wikipedia.org/wiki/Voxel">Voxels</a> (3D pixels) that your camera can see or your LED cube can generate.
+                        </p>
+                        
+                        <p>
+                            In this situation, the LED Cube used is 4x4x4; so it only has 16 Voxels and can only recreate very simply shapes.
+                        </p>
+                        
+                        <p>
+                            If you have a massive LED Cube (like <a href="https://www.youtube.com/watch?v=f1YNyQqbiF0">32x32x32 or 32768 voxel cube</a>), you can make very high quality holograms.
+                        </p>
+                        
+                        <p>
+                            Unfortunately, I didn't have an unlimited budget; this entire project was wired and coded (in Processing) in four days for <a href="http://build18.org/">Build18</a>, an Electrical Engineering Hackathon at Carnegie Mellon.
+                        </p>
+                        <p>
+                            You can take a gander at the <a href="http://build18.ece.cmu.edu/wiki/index.php/Hologram_Generator">Wiki page</a>.
+                        </p>
+                        <hr>
+                </div>
+        
+        
+                <div class="col-md-6 col-xs-12 project_block">
+                    <div class="project_image_holder">
+                        <img class="img-responsive" src="images/gravity.gif">
+                        <h3>Gravity Offload Sensing</h3>
+                    </div>
+                        <p>
+                            My team and I built a machine which simulates reduced moon-level gravity for moon rovers.
+                        </p>
+                        <p>
+                            We built a prototype sensing mechanism for this gravity simulator. The gravity offloading cord must always be on top of the object that you are simulating moon level gravity on. Thus, if the object moves, the cord must move at the same time.
+                        </p>
+                        <p>
+                            Our sensing mechanism detects the angle offset of the object and sends commands to the tether cord to move it back on top of the object. The video should explain this better.
+                        </p>
+                        <p>
+                            Carnegie Mellon took the initial prototype and eventually built this <a href="http://www.astrobotic.com/2013/11/12/astrobotic-releases-video-on-simulating-reduced-gravity/">crazy thing.</a>
+                        </p>
+                        <hr>
+                </div>
         
         </div>
+        
+        
+        <div class="row">
+                <div class="col-md-6 col-xs-12 project_block">
+                    <div class="project_image_holder">
+                        <img class="img-responsive" src="images/TrueCostCalculatorImage.png">
+                        <h3>True Cost Calculator</h3>
+                    </div>
+                    <p>
+                        Final project for my enviromental engineering course was to research the total cost for an object of our choice. For example: What is the total petrol, raw materials, energy, ect needed to acquire all the ingredients, bring them to the factory and make a candy bar?
+                    </p>
+                    
+                    <p>
+                        I figured that was probably going to be <del>banal</del> be rather time consuming, so I used the US government's <a href="http://www.nrel.gov/lci/">NREL database</a> and wrote a program in VBA to automate the entire process. 
+                    </p>
+                    
+                    <p>
+                        <a href="downloads/True%20Cost%20Calculator.zip">Download</a> it, select the object you want and the program will calculate the raw materials and energy cost needed to build said object!
+                    </p>
+                    <hr>
+                </div>
+                
+                    
+                <div class="col-md-6 col-xs-12 project_block">
+                    <div class="project_image_holder">
+                        <img class="img-responsive" src="images/BattlePongImage.png">
+                        <h3>Battle Pong</h3>
+                    </div>
+                    <p>
+                        I made Pong using Pygame (a library for Python). It's the first game I ever made on my own :)
+                    </p>
+                    
+                    <p>
+                        Please <a href="downloads/Battle%20Pong.zip">download the game</a> and let me know what you think! It's just a demo and I'll add sounds/ better mechanics/ score board/ ect later.
+                    </p>
+                    
+                    <p>
+                        Controls: Left Paddle: Q/A, Right Paddle: O/L
+                    </p>
+                        <hr>
+                </div>
+        </div>
+        
     </div>
-           
+    </div>
+        
+    <div id="demoLightbox" class="lightbox hide fade"  tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class='lightbox-content'>
+                            <iframe width="640" height="360"  src="//www.youtube.com/embed/Mqmlf6NhmIQ?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+                        </div>
+    </div> 
     
     <footer class="footer">
       <div class="container">
