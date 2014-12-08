@@ -13,28 +13,29 @@ h1 {
 .navbar {
     /*background: rgb(103,58,183);
     height: 100px;
-}*/
+}
 
 .nav a {
     vertical-align: middle;
     text-align: center;
     height: 100%;
 }
-/*
+
 
 .nav li {
     vertical-align: middle;
     height: 100px;
 }
 
-
-
+*/
 .navbar-brand img {
     vertical-align: middle;
     height: 100%;
     float: left;
     margin-right: 15px;
 }
+
+/*
 
 .navbar-brand {
     height: 100px;
