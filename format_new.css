@@ -40,6 +40,11 @@ h1 {
     height: 100px;
 }
 
+.jumbotron h1 {
+    padding-top: 45px;
+    padding-bottom: 25px;
+}
+
 
 /*Main Information*/
 .panel-heading {
