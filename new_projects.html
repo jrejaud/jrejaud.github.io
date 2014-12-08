@@ -14,11 +14,9 @@
     
     
     <!-- Video Box -->
-    <script src="js/mootools.js"></script>
-    <script src="js/swfobject.js"></script>
-    <script src="js/videobox.js"></script>
     
-    <link rel="stylesheet" href="css/videobox.css">
+    
+    <link href="ekko-lightbox.css" rel="stylesheet" >
     
 
     <!-- Bootstrap -->
@@ -33,12 +31,7 @@
         
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
-        
-    <link href="lightbox/bootstrap-lightbox.min.css" rel="stylesheet">
-        
-    <script src="lightbox/bootstrap-lightbox.js"></script>
-     
-        
+
     <link href="format_new.css" rel="stylesheet">
         
     <link href="footer.css" rel="stylesheet">
@@ -104,6 +97,7 @@
         <div class="row">
                 <div class="col-md-6 col-xs-12 project_block">
                     <div class="project_image_holder">
+                        <a href="http://www.youtube.com/watch?v=-Nh7vPKX9Hc" data-toggle="lightbox">Launch modal</a>
                         <a href="http://www.youtube.com/watch?v=-Nh7vPKX9Hc" rel="vidbox 800 600">
                         <img class="img-responsive" src="images/robot_gif.gif">
                         <h3>Robotic Prosthetic Arm</h3></a>
@@ -300,12 +294,7 @@
     </div>
     </div>
         
-    <div id="demoLightbox" class="lightbox hide fade"  tabindex="-1" role="dialog" aria-hidden="true">
-                        <div class='lightbox-content'>
-                            <iframe width="640" height="360"  src="//www.youtube.com/embed/Mqmlf6NhmIQ?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
-                        </div>
-    </div> 
-    
+        
     <footer class="footer">
       <div class="container">
         <p class="text-muted"><span class="glyphicon glyphicon-copyright-mark"/> 2014, Jordan Rejaud
@@ -317,6 +306,16 @@
         </p>
       </div>
     </footer>
+    
+    <script src="ekko-lightbox.js"></script>
+    <script type="text/javascript">
+			$(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+                    event.preventDefault();
+                    $(this).ekkoLightbox();
+                }); 
+
+    </script>
+    
     
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
