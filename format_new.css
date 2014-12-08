@@ -9,9 +9,9 @@ h1 {
 .page-header {
     margin-top: 70px;
 }
-
+/*
 .navbar {
-    /*background: rgb(103,58,183);*/
+    /*background: rgb(103,58,183);
     height: 100px;
 }
 
@@ -44,7 +44,7 @@ h1 {
     padding-top: 45px;
     padding-bottom: 25px;
 }
-
+*/
 
 /*Main Information*/
 .panel-heading {
