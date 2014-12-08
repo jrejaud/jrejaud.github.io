@@ -10,8 +10,9 @@ h1 {
     margin-top: 70px;
 }
 
-
-
+.jumbotron {
+    margin-top: 45px;
+}
 /*
 .navbar {
     /*background: rgb(103,58,183);
@@ -39,7 +40,7 @@ h1 {
 }
 
 
-
+/*
 .navbar-brand {
     height: 100px;
 }
