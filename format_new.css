@@ -47,6 +47,10 @@ body {
     margin-right: 15px;
 }
 
+.nav img {
+    vertical-align: middle;
+    height: 60px;
+}
 
 
 .navbar-brand {
