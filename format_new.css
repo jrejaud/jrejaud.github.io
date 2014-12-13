@@ -49,8 +49,14 @@ body {
 
 .nav img {
     vertical-align: middle;
-    max-height: 100px;
+    height: 75px;
 }
+
+@media (max-width: @screen-sm-min) {
+    .nav img {
+    vertical-align: middle;
+    height: 20px;
+} }
 
 
 .navbar-brand {
