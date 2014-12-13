@@ -52,6 +52,10 @@ body {
     height: 75px;
 }
 
+.navbar-brand {
+    height: 100px;
+}
+
 @media screen and (max-width: 768px) {
     .nav img {
     vertical-align: middle;
@@ -61,12 +65,12 @@ body {
         vertical-align: middle;
         height: 50px;
     }
+    .navbar-brand {
+    height: 75px;
+}
 }
 
 
-.navbar-brand {
-    height: 100px;
-}
 /*
 
 .jumbotron h1 {
