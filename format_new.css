@@ -55,7 +55,11 @@ body {
 @media screen and (max-width: 768px) {
     .nav img {
     vertical-align: middle;
-    height: 20px;
+    height: 100%;
+    }
+    .nav li {
+        vertical-align: middle;
+        height: 60px;
     }
 }
 
