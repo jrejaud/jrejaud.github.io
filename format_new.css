@@ -104,12 +104,12 @@ h2 {
 
 .project_image_holder {
     text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    /*padding-top: 10px;
+    /*padding-bottom: 10px;*/
     vertical-align: middle;
     display: inline-block;
     height: 100%;
-    position: relative /* For projection of text */
+    /*position: relative /* For projection of text */
 }
 
 .project_image_holder h3 {
