@@ -4,6 +4,10 @@
 /* Fonts and Colors */
 h1 {
     color: rgb(103,33,122);
+    /*color: rgb(146,39,143); This is what resume has..*/
+}
+h2 {
+    color: rgb(18,126,17);
 }
 
 .page-header {
@@ -13,11 +17,11 @@ h1 {
 .jumbotron {
     margin-top: 45px;
 }
-/*
+
 .navbar {
-    /*background: rgb(103,58,183);
-    height: 100px;
-}*/
+    background: rgb(103,58,183);
+    /*height: 100px;*/
+}
 
 .nav a {
     vertical-align: middle;
