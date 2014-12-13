@@ -6,7 +6,7 @@ h1 {
     color: rgb(103,33,122);
     /*color: rgb(146,39,143); This is what resume has..*/
 }
-h2 {
+h2, h3 {
     color: rgb(18,126,17);
 }
 
