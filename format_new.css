@@ -131,6 +131,7 @@ h2 {
     clear:both;
 }
 
+/* From https://jonsuh.com/blog/responsive-youtube-vimeo-embed-and-html5-video-with-css/ */
 .js-video {
   height: 0;
   padding-top: 25px;
