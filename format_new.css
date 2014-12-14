@@ -80,11 +80,11 @@ body {
     height: 75px;
     }
     .pull-right {
-        margin-right: 2px;
+        margin-right: 0px;
     }
     
     .pull-left {
-        margin-left: 2px;
+        margin-left: 0px;
     }
 }
 
