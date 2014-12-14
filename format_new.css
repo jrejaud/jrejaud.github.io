@@ -39,6 +39,9 @@ body {
     height: 100px;
 }
 
+.nav li:hover {
+    background-color: grey;
+}
 
 .navbar-brand img {
     vertical-align: middle;
