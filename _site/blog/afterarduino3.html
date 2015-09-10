@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<!-- Link CSS style sheet -->    
+<link rel="stylesheet" type="text/css" href="../format.css">
+<link rel="stylesheet" type="text/css" media="only screen and (min-width:50px) and (max-width:1280px)" href="../format_mobile.css" />
+
+<div style="font-family: WeblySleekUI;">
+
+    <title>
+        After Arduino
+    </title>
+    
+    <link rel="shortcut icon" href="favicon.ico">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46626593-1', 'jordanrejaud.com');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">About Me</a></li>
+            <li><a href="resume.html" class="cvnav">Curriculum vitae</a></li>
+            <li><a  href="projects.html">Projects</a></li>
+            <li><a href="apps.html">Apps</a></li>
+            <li><a href="learning.html">Learning</a></li>
+            <li><a href="design.html">Design</a></li>
+            <li><a  style="color: #FFFFFF;" href="blog.html">Blog</a></li>
+        </ul>
+    </nav>     
+
+<div class="margins">
+
+<h1>
+    After Arduino Part 3: Using an ATMega328P inside an electronics circuit
+</h1>
+
+<hr>
+<p>
+    Vernacularly known as a "Standalone Arduino" or "Minimalist Arduino" or "Breadboard Arduino"
+</p>
+<p>
+    You should be familiar with the <a href="http://www.jordanrejaud.com/learning.html#Fundamentals%20of%20Electronics">Fundamentals of Electronics</a> before proceeding.
+</p>
+<p>
+    This page is a work in progress, follow me on <a href="https://twitter.com/JordanRejaud">twitter</a> if you would like to know when I update it.
+</p>
+<hr>
+
+<!-- Overview-->
+<div class="grey_background">
+    <h2>
+        Overview
+    </h2>
+        <div class="block"> 
+            
+            <p>
+                Want to learn how to build a circuit with a microcontroller in it? Do you want to take your ATMega328p <del>out of Egypt</del> off your Arduino Uno and have it still run the Arduino code you wrote?
+                Alternatively, this guide also works with microcontrollers that have been programmed using AVR-C :)
+            </p>
+            <p>
+               Unlike a lot of "Breadboard Arduino" guides I've read, which just tells you to "plug stuff in here and do this", I will explain the theory and rational behind this circuit.
+            </p>
+        </div>
+        <div class="clear"></div>
+</div>
+
+<!-- Removing the MCU-->
+<h2>
+    Removing the microcontroller (ATMega328P) from the breadboard
+</h2>
+    <div class="block">
+        <p>
+            Key Prerequisites: <a href="https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/introduction">Breadboards</a>
+        </p>
+        
+        <!-- Removal Video -->
+        <div style="text-align: center;">
+        <figure >
+        <iframe width="640" height="360"   src="//www.youtube.com/embed/Hi5CsIsq28M?rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+        <figcaption>Source: <a href="https://www.youtube.com/channel/UCoWEbF996OvQsFyqG2v47rg">TrustFm</a></figcaption>
+        </figure>
+        </div>
+        <br>
+
+        
+        <!-- BB Image -->
+        <div style="text-align: center;">
+        <figure >
+        <img style="height:300px;" src="../images/atmegaboardImage.png">
+        <figcaption>ATMega328P on breadboard</a></figcaption>
+        </figure>
+        </div>
+        
+        <p>
+            Pop out the ATMega328P and put it on your breadboard. It is ornery like a <a href="https://www.youtube.com/watch?v=4r7wHMg5Yjg&feature=kp">Honey Badger</a> and will not want to come out of its <a href="https://www.sparkfun.com/products/7942">DIP Socket</a> easily. But you must outsmart this chip and you must snatch victory by the balls.
+        </p>
+        
+    <div class="clear"></div>
+</div>
+
+<!-- Power Supply -->
+<div class="grey_background">
+    <h2>
+        Power Supply
+    </h2>
+        <div class="block">
+            <p>
+                Key Prerequisites: <a href="https://learn.sparkfun.com/tutorials/electric-power">Electrical Power</a>, <a href="https://learn.sparkfun.com/tutorials/diodes">Diodes</a>, <a href="https://learn.sparkfun.com/tutorials/capacitors">Capacitors</a>, <a href="https://learn.sparkfun.com/tutorials/integrated-circuits">Integrated Circuits</a>
+            </p>           
+            <p>
+                When you connect your USB cable or a <a href="http://playground.arduino.cc/Learning/WhatAdapter">2.1mm plug</a>, you give power to your Arduino Board. But how much voltage and current do I need and how do I provide that power to the microcontroller?
+            </p>
+            <p>
+                According to our friend, the <a href="http://www.atmel.com/devices/atmega328p.aspx">datasheet</a>, an ATMega328P needs 1.8-5.5V (voltage) and ~0.2mA (current) in active mode.  
+            </p>
+            
+        <div style="text-align: center;">
+        <figure >
+        <a href="../images/atmegapinImage.png"><img style="height:500px;" src="../images/atmegapinImage.png"></a>
+        <figcaption>Your VCC Pin and GND Pins and numbers 7 and 8</a></figcaption>
+        </figure>
+        </div>
+        <br>
+        
+        <div style="text-align: center;">
+        <figure >
+        <a href="../images/atmegapowerboardImage.png"><img style="height:375px;" src="../images/atmegapowerboardImage.png"></a>
+        <figcaption>A plausible way to power your ATMega328p</a></figcaption>
+        </figure>
+        </div>
+        <br>
+
+        <div style="text-align: center;">
+        <figure >
+        <a href="../images/atmegaboardnoclockcircuitImage.png"><img style="height:300px;" src="../images/atmegaboardnoclockcircuitImage.png"></a>
+        <figcaption>Schematic view of the above circuit</a></figcaption>
+        </figure>
+        </div>
+        <br>
+            
+            <p>
+                The <a href="https://www.sparkfun.com/products/107">5V Voltage Regulator</a> will drop down a higher voltage (up to 35V) to 5V.
+            </p>
+            <p>
+                The <a href="https://www.sparkfun.com/products/523">10uF capacitors</a> let high frequency voltage changes go through to capacitor to ground and thus stops "ripples" in your power source from messing with your IC. Want more information on why this is important and how it works? <a href="https://learn.sparkfun.com/tutorials/capacitors/application-examples">High frequency noise suppression</a>, alternatively <a href="http://youtu.be/TwIvUbOhcKE?t=1m5s">AC seems to flow more easily through capacitors than DC</a>.
+            </p>
+            <p>
+                The <a href="https://learn.sparkfun.com/tutorials/diodes">diode</a> is important since the capacitors and IC are <a href="https://learn.sparkfun.com/tutorials/polarity/all">polar</a>. Also, it makes sure that <a href="http://www.electroboom.com/?p=56">this</a> doesn't happen.
+            </p>
+            <p>
+                Granted, these components aren't <b>required</b>, and for certain circuits you might not need them. For example, two AA batteries provides 3V, and that's enough to power an ATMega328P :)
+            </p>
+            
+        </div>
+        <div class="clear"></div>
+</div>
+
+<!-- Clock-->
+<h2>
+    Clock
+</h2>
+    <div class="block">
+        <p>
+            Key Prerequisites: <a href="http://www.ladyada.net/learn/avr/fuses.html">Fuses</a>, <a href="https://www.sparkfun.com/tutorials/95">Oscillators and Resonators</a>, <a href="http://www.ladyada.net/learn/avr/avrdude.html">AVRDude</a> (or some way to change the fuses)
+        </p>
+        
+        <!-- BB Image -->
+        <div style="text-align: center;">
+        <figure >
+        <img style="height:375px;" src="../images/atmegapowerclockboardImage.png">
+        <figcaption>Let's add an external clock to our little menagerie</a></figcaption>
+        </figure>
+        </div>
+         <br>
+
+        <div style="text-align: center;">
+        <figure >
+        <a href="../images/atmegaboardnoclockcircuitImage.png"><img style="height:300px;" src="../images/atmegaboardcircuitImage.png"></a>
+        <figcaption>Schematic view of the above circuit</a></figcaption>
+        </figure>
+        </div>
+        
+        <p>
+            An <a href="http://arduino.cc/en/uploads/Main/Arduino_Uno_Rev3-schematic.pdf">Arduino Uno</a> Rev3 (Version 3, the latest one at the time of my writing this) uses a 16mHz external oscillator as its clock.
+        </p>
+        <p>
+            A singular ATMega328P gives you more freedom with your clock selection, with the help of a <a href="http://www.engbedded.com/fusecalc">fuse calculator</a>, you can choose:
+        </p>
+        <ul style="color: rgb(0,0,0);">
+            <li>Internal 1 mHz RC Oscillator</li>
+            <li>Internal 8 mHz RC Oscillator</li>
+            <li>Internal 16 kHz RC Oscillator</li>
+            <li>Internal 128 kHz RC Oscillator</li>
+            <li>External Clock</li>
+            <li></li>
+        </ul>
+        <p>
+            In this example, I am using a <a href="http://www.adafruit.com/products/1873?gclid=CjkKEQjwqYacBRDO-Mrk6_vr8eQBEiQAWJadfJLcVFZRdE78YPX1DaTPvtnOMQxkjB6P_A5yr1HT2Mfw_wcB">16 mHz Resonator</a>, since that's what the Arduino Uno uses. The outer pins of the resonator go to the crystal pins (9 and 10, direction doesn't matter) and the middle pin goes to GND.
+        </p>
+        
+    <div class="clear"></div>
+</div>
+
+
+<!-- Power Supply -->
+<div class="grey_background">
+    <h2>
+        Conclusion
+    </h2>
+        <div class="block">
+                    <!-- BB Image -->
+        <div style="text-align: center;">
+        <img style="height:300px;" src="http://www.soothetube.com/wp-content/uploads/2013/12/all.jpg">
+        </div>
+            <p>
+                That's the basics you need to get started! Program your chip in your Arduino Uno, pop it out and tada! Want to learn how to program your chip without an Uno, and other things? <a href="http://www.jordanrejaud.com/learning.html#Embedded%20Systems">Go to the Learning Page</a>
+            </p>
+            <p> 
+                Follow me on <a href="https://twitter.com/JordanRejaud">twitter</a> if you would like to know when I update this page and site. 
+            </p>           
+        </div>
+        <div class="clear"></div>
+</div>
+
+</div>
+<footer>
+    <div class="footercolor">
+    <table>
+        <td><p>Copyright 2014 Jordan Rejaud</p></td>
+        <td>
+            <p><a href="mailto:jrejaud@gmail.com">Contact</a></p>    
+        </td>
+        <td>
+            <p><a href="https://twitter.com/JordanRejaud">Twitter</a></p>  
+        </td>
+        <td>
+            <p><a href="https://www.facebook.com/jrejaud">Facebook</a></p>
+        </td>
+        <td>
+            <p><a href="https://github.com/jrejaud">GitHub</a></p>
+        </td>
+        <td>
+            <p><a href="https://www.linkedin.com/profile/view?id=141100597">LinkedIn</a></p>
+        </td>
+    </table>
+    </div>
+</footer>
+
+</body>
+
+
+</div>
+</html>

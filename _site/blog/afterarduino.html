@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<!-- Link CSS style sheet -->    
+<link rel="stylesheet" type="text/css" href="../format.css">
+<link rel="stylesheet" type="text/css" media="only screen and (min-width:50px) and (max-width:1280px)" href="../format_mobile.css" />
+
+<div style="font-family: WeblySleekUI;">
+
+    <title>
+        After Arduino
+    </title>
+    
+    <link rel="shortcut icon" href="favicon.ico">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46626593-1', 'jordanrejaud.com');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">About Me</a></li>
+            <li><a href="resume.html" class="cvnav">Curriculum vitae</a></li>
+            <li><a  href="projects.html">Projects</a></li>
+            <li><a href="apps.html">Apps</a></li>
+            <li><a href="learning.html">Learning</a></li>
+            <li><a href="design.html">Design</a></li>
+            <li><a  style="color: #FFFFFF;" href="blog.html">Blog</a></li>
+        </ul>
+    </nav>       
+<div class="margins">
+
+<h1>
+    After Arduino Part 1: What is the Arduino and why go beyond?
+</h1>
+
+<hr>
+<p>
+    Embedded Electronics, the final frontier. These are guides to help those who use Arduinos become more familiar with microcontroller programming. Their continuining mission: To elucidate strange new engineers, to design new circuits, and boldly build all kinds of crazy machinations.
+</p>
+<hr>
+
+    <div style="text-align: center;">
+        <p>
+            "Arduino" is, in my experience, often used unspecifically. I argue that there are three parts that make up the Arduino prototyping platform
+        </p>
+    </div>
+    
+        <ol>
+            <li> The Arduino <a href="http://arduino.cc/en/Reference/HomePage">Programming Language</a>: The Arduino "Language" isn't its own programming language, but rather C++ (with many libraries to simplify electronics related tasks, like digitalWrite, analogRead, ect).</li>
+            <li>The Arduino <a href="http://arduino.cc/en/main/software">IDE</a> (Integrated Development Environment) that lets you write your C++ code, compile it, and upload it to a Microcontroller.</li>
+            <li>The Arduino <a href="http://arduino.cc/en/main/boards">boards</a> themselves, such as the Arduino Uno, the Arduino Mega, and the Arduino Micro. There are MANY different boards.</li>
+        </ol>
+    
+    <div style="text-align: center;">
+        <figure>
+        <img style="height: 400px;" src="../images/unopictureImage.png">
+        <figcaption style="font-family: LearningCurve; font-size: 42px;">Ceci n'est pas un Microcontroller</figcaption>
+        </figure>
+        
+        <p>
+            Arduino boards are often referred to as microcontroller by electronics neophytes. According to <a href="http://www.arduino.cc/">Arduino</a>&#39;s website:
+        </p>
+        
+        <img style="height: 150px;" src="../images/arduinositeImage.png">   
+    </div>
+    <p>
+        An Arduino board (like the Arduino Uno) isn&#39t a microcontroller, but rather an electronics prototyping platform that <b>contains</b> a microcontroller. When you upload your code to your arduino board, what you are actually doing is uploading it to the microcontroller on the board. A microcontroller (also referred to as a microcontroller Unit, MCU, or &microC) is the brains of an Arduino board, but your Arduino board also contains many other components (that you may or may not be using, based on your project).
+    </p>
+    
+    <p>
+        After this great revelation, you must be wondering: &#39Where is the MCU on my Arduino board?&#39 For this tutorial, let's focus on the Arduino Uno board.
+    </p>
+    
+    <table class="learningtable">
+            <td>
+                <figure>
+                <img style="height: 75px;" src="../images/unopicturemcuImage.png">
+                <figcaption>Things that are the MCU</figcaption>
+                </figure>     
+            </td>
+            <td>
+                <figure>
+                <img style="height: 250px;" src="../images/unopicturenomcuImage.png">
+                <figcaption>Things that are <b>not</b> the MCU</figcaption>
+                </figure>
+            </td>
+    </table>
+    <div class="clear"></div>
+        
+    <p>
+        This is all rather edifying, but why would you care what the MCU on your Arduino is? Why bother learning about how the board works and what the Arduino "language" is?
+    </p>
+    
+    <p>
+        Because, with the right hardware and software, you can program your MCU directly without a board and you can write non-Arduino software to run on your Arduino Board! 
+    </p>
+    
+    <p>
+        But that's not all! You also get these amazing perks once you <strike>actually understand wtf is going on</strike> delve deeper into how MCUs work.
+    </p>
+    
+    <p>
+        1. You don't have to use the Arduino IDE anymore. Want to collapse your functions (hide them) while editing? Want to use the same editor to program your Arduino and build a website? Want to be 1337 and upload your Arduino code with the command line?
+    </p>
+            <table class="learningtable">
+            <td>
+                <figure>
+                <img style="height: 300px;" src="../images/arduinoideImage.png">
+                <figcaption>The Arduino IDE</figcaption>
+                </figure>    
+            </td>
+            <td>
+                <figure>
+                <img style="height: 300px;" src="../images/komodoideImage.png">
+                <figcaption>Komodo Edit (What I use)</figcaption>
+                </figure>
+            </td>
+        </table>
+        <div class="clear"></div>
+    
+    <p>
+        2. Learn to write programs in AVR-C as opposed to Arduino C++ and your code will be much smaller and faster. The Arduino Blink.ino file takes up 3% of the flash memory space on an Arduino Uno. An equivalent program wirtten in AVR-C would only take up 0.625%
+        and it would run faster. That size and speed difference doesn't matter if you using Blink, but if are writing a more complex program, you will probably notice the difference. The Arduino also uses a <a href="http://www.ladyada.net/learn/avr/programmers.html">bootloader</a> so Arduino programs take up more space, but don't require a dedicated programmer.
+    </p>
+    
+    <p>
+        3. <del>Become a rich shibe</del> An Arduino Uno costs <a href="https://www.sparkfun.com/products/11021">$25</a>, an ATMega328p costs less then <a href="http://www.digikey.com/product-detail/en/ATMEGA328P-PU/ATMEGA328P-PU-ND/1914589">$4</a>. Not that much money for a single project, but if you plan to make a lot of things, that's quite a difference.
+    </p>
+    
+    <p>
+        4. Size, Arduinos can be rather large. You can make your projects a lot smaller if you build the circuit yourself.
+    </p>
+    
+    <p>
+        Ready to learn? <a href="../learning.html#Embedded Systems">AVR-C Tutorials</a>.
+    </p>
+    
+<div class="clear"></div>
+</div>
+<footer>
+    <div class="footercolor">
+    <table>
+        <td><p>Copyright 2014 Jordan Rejaud</p></td>
+        <td>
+            <p><a href="mailto:jrejaud@gmail.com">Contact</a></p>    
+        </td>
+        <td>
+            <p><a href="https://twitter.com/JordanRejaud">Twitter</a></p>  
+        </td>
+        <td>
+            <p><a href="https://www.facebook.com/jrejaud">Facebook</a></p>
+        </td>
+        <td>
+            <p><a href="https://github.com/jrejaud">GitHub</a></p>
+        </td>
+        <td>
+            <p><a href="https://www.linkedin.com/profile/view?id=141100597">LinkedIn</a></p>
+        </td>
+    </table>
+    </div>
+</footer>
+
+</body>
+
+
+</div>
+</html>

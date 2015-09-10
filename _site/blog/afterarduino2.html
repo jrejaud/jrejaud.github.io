@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<!-- Link CSS style sheet -->    
+<link rel="stylesheet" type="text/css" href="../format.css">
+<link rel="stylesheet" type="text/css" media="only screen and (min-width:50px) and (max-width:1280px)" href="../format_mobile.css" />
+
+<div style="font-family: WeblySleekUI;">
+
+    <title>
+        After Arduino
+    </title>
+    
+    <link rel="shortcut icon" href="favicon.ico">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46626593-1', 'jordanrejaud.com');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">About Me</a></li>
+            <li><a href="resume.html" class="cvnav">Curriculum vitae</a></li>
+            <li><a  href="projects.html">Projects</a></li>
+            <li><a href="apps.html">Apps</a></li>
+            <li><a href="learning.html">Learning</a></li>
+            <li><a href="design.html">Design</a></li>
+            <li><a  style="color: #FFFFFF;" href="blog.html">Blog</a></li>
+        </ul>
+    </nav>             
+<div class="margins">
+
+<h1>
+    After Arduino Part 2: AVR-C Reference Guide
+</h1>
+
+<hr>
+<p>
+    Note: This reference guide is intended for those who have completed <a href="http://www.jordanrejaud.com/learning.html#Embedded Systems">AVR-C Tutorials</a>. This will make no sense if you aren't familiar with AVR-C.
+</p>
+<p>
+    Use this guide in conjunction with the <a href="http://www.atmel.com/devices/atmega328p.aspx">ATmega328p</a> datasheet.
+</p>
+<p>
+    This page is a work in progress, follow me on <a href="https://twitter.com/JordanRejaud">twitter</a> if you would like to know when I update it.
+</p>
+<hr>
+
+<a name="Port_Manipulation"></a>
+<div class="grey_background">
+<div class="block">
+<details>
+<summary>Port Manipulation</summary>
+    <p>
+        Arduino: <a href="http://arduino.cc/en/Reference/PinMode">pinMode()</a> --- Atmel Datasheet: Section 14.4
+    </p>
+    
+    <div style="text-align: center;">
+     <figure>
+        <img src="../images/atmegapinImage.png">
+        <figcaption>Source: <a href="http://www.chicoree.fr/w/Arduino_sur_ATmega328P">http://www.chicoree.fr/w/Arduino_sur_ATmega328P</a></figcaption>
+    </figure>     
+    </div>
+    
+    <p><b>Syntax</b></p>
+    <hr>
+    <p><span class="crimson">//Set Pin for output</span></p>
+    <pre><code>DDR<span class="amber">x</span> |= (1&lt;&lt;PD<span class="olive">n</span>);</code></pre>
+    <p><span class="crimson">//Set Pin for input</span></p>
+    <pre><code>DDR<span class="amber">x</span> &= ~(1&lt;&lt;PD<span class="olive">n</span>);</code></pre>
+    <p><span class="crimson">//Set internal pull-up resistor (after setting Pin for input)</span></p>
+    <pre><code>PORT<span class="amber">x</span> |= (1&lt;&lt;PD<span class="olive">n</span>);</code></pre>
+    <hr>
+    
+    <br>
+        
+    <p><b>Registers</b></p>
+    <hr>
+    <p>
+        DDR<span class="amber">x</span>: Port <span class="amber">x</span> Data Direction Register
+    </p>
+    <p>
+        PD<span class="olive">n</span>: AVR-C Library "shortcut" for pin number <span class="olive">n</span>
+    </p>
+    
+    <p class="amber">
+        x = PORT; A, B, C, or D
+    </p>
+    
+    <p class="olive">
+        n = Pin number; 0, 1, 2, 3, ect.
+    </p>
+    <hr>
+    
+    <br>
+        
+    <p><b>Explanation</b></p>    
+    <hr>    
+    <p>
+        Set pin to 1 for output; Set pin to 0 for input
+    </p>
+    <hr>
+    
+</div>
+<div class="clear"></div>
+</div>
+</details>
+
+<a name="Digital_Output"></a>
+<div class="block">
+<details>
+<summary>Digital Output</summary>
+    <p>
+        Arduino: <a href="http://arduino.cc/en/Reference/DigitalWrite">digitalWrite()</a> --- Atmel Datasheet: Section 14.4
+    </p>
+    
+    <p><b>Syntax</b></p>
+    <hr>
+    <p><span class="crimson">//Set Pin High</span></p>
+    <pre><code>PORT<span class="amber">x</span> |= (1&lt;&lt;PD<span class="olive">n</span>);</code></pre>
+    <p><span class="crimson">//Set Pin Low</span></p>
+    <pre><code>PORT<span class="amber">x</span> &= ~(1&lt;&lt;PD<span class="olive">n</span>);</code></pre>
+    <hr>
+    
+    <br>
+        
+    <p><b>Registers</b></p>
+    <hr>
+    <p>
+        PORT<span class="amber">x</span>: Port <span class="amber">x</span> Data Register
+    </p>
+    <p>
+        PD<span class="olive">n</span>: AVR-C Library "shortcut" for pin number <span class="olive">n</span>
+    </p>
+    
+    <p class="amber">
+        x = PORT; A, B, C, or D
+    </p>
+    
+    <p class="olive">
+        n = Pin number; 0, 1, 2, 3, ect.
+    </p>
+    <hr>
+    
+    <br>
+        
+    <p><b>Explanation</b></p>    
+    <hr>    
+    <p>
+        Set pin to 1 for HIGH (5V on ATmega328p); Set pin to 0 for LOW (0V on ATmega328p)
+    </p>
+    <hr>
+    
+</div>
+<div class="clear"></div>
+</details>
+
+<a name="Digital_Input"></a>
+<div class="grey_background">
+<div class="block">
+<details>
+<summary>Digital Input</summary>
+    <p>
+        Arduino: <a href="http://arduino.cc/en/Reference/DigitalRead">digitalRead()</a> --- Atmel Datasheet: Section 14.4
+    </p>
+
+    
+    
+    <p><b>Syntax</b></p>
+    <hr>
+    <pre><code>if (PIN<span class="amber">x</span> & (1&lt;&lt;PD<span class="olive">n</span>));</code></pre>
+    <hr>
+    
+    <br>
+        
+    <p><b>Registers</b></p>
+    <hr>
+    <p>
+        PIN<span class="amber">x</span>: Port <span class="amber">x</span> Input Pins Address
+    </p>
+    
+    <p>
+        PD<span class="olive">n</span>: AVR-C Library "shortcut" for pin number <span class="olive">n</span>
+    </p>
+    
+    <p class="amber">
+        x = PORT; A, B, C, or D
+    </p>
+    
+    <p class="olive">
+        n = Pin number; 0, 1, 2, 3, ect.
+    </p>
+    <hr>
+    
+    <br>
+        
+    <p><b>Explanation</b></p>    
+    <hr>    
+    <p>
+        *Don't forget to turn on pull-up resistors if you need them!
+    </p>
+    
+    <p>
+        Will return 0 is pin is LOW; will return NOT 0 is pin is HIGH
+    </p>
+    <hr>
+</div>
+<div class="clear"></div>
+</div>
+</details>
+
+<a name="Analog_Input"></a>
+<div class="block">
+<details>
+<summary>Analog Input</summary>
+    <p>
+        Arduino: <a href="http://arduino.cc/en/Reference/AnalogRead">analogRead()</a> --- Atmel Datasheet: Sections 24 and 14.4
+    </p>
+    
+    <p><b>Syntax (ADC initialize example)</b></p>
+    <hr>
+    <p><span class="crimson">//16Mhz / 128 = 125kHz ADC reference clock</span></p>
+    <pre class="amber"><code>ADCSRA |= ((1&lt;&lt;ADPS2)|(1&lt;&lt;ADPS1)|(1&lt;&lt;ADPS0));</code></pre>
+    
+    <p><span class="crimson">//Voltage reference from AVcc (5V on ATMega328p)</span></p>
+    <pre class="olive"><code>ADMUX |= (1&lt;&lt;REFS0); </code></pre>
+
+    <p><span class="crimson">//Turn on ADC</span></p>
+    <pre><code><span class="amber">ADCSRA</span> |= (1&lt;&lt;<span class="emerald">ADEN</span>);</code></pre>
+    
+    <p><span class="crimson">//Do a preliminary conversion</span></p>
+    <pre><code><span class="amber">ADCSRA</span> |= (1&lt;&lt;<span class="cyan">ADSC</span>);</code></pre>
+    
+    <hr>
+    
+    <br>
+    
+    <p><b>Syntax (ADC read example)</b></p>
+    <hr>
+    <p><span class="crimson">//Clear previously read channel</span></p>
+    <pre class="olive"><code>ADMUX &= 0xF0;</code></pre>
+    
+    <p><span class="crimson">//Define new ADC Channel to read (which analog pin: 0-5 on ATMega328p</span></p>
+    <pre class="olive"><code>ADMUX |= channel;</code></pre>
+
+    <p><span class="crimson">//New Conversion</span></p>
+    <pre><code><span class="amber">ADCSRA</span> |= (1&lt;&lt;<span class="cyan">ADSC</span>);</code></pre>
+    
+    <p><span class="crimson">//Do a preliminary conversion</span></p>
+    <pre><code><span class="amber">ADCSRA</span> |= (1&lt;&lt;<span class="cyan">ADSC</span>);</code></pre>
+    
+    <p><span class="crimson">//Wait until conversion is finished</span></p>
+    <pre><code>while(<span class="amber">ADCSRA</span> & (1&lt;&lt;<span class="cyan">ADSC</span>));</code></pre>
+    
+    <p><span class="crimson">//Return ADC value</span></p>
+    <pre><code>return <span class="taupe">ADCW</span>;</code></pre>
+    
+    <hr>
+    
+    <br>    
+    
+    
+        
+    <p><b>Registers</b></p>
+    <hr>
+    <div class="amber">
+    <p>
+        ADCSRA and ADCSRB: ADC Control and Status Registers A and B
+    </p>
+    
+    <p>
+        ADPS[2:0]: ADC Prescaler Select Bits
+    </p>
+    </div>
+    
+    <div class="olive">
+    <p>
+        ADMUX: ADC Multiplexer Selection Register
+    </p>
+    
+    <p>
+        REFS[1:0]: Voltage Reference Selection Bits
+    </p>
+    </div>
+    
+    <p class="emerald">
+        ADEN: ADC Enable
+    </p>
+    <p class="cyan">
+        ADSC: ADC Start Conversion
+    </p>
+    
+    <p class="taupe">
+        ADCW: "Shortcut" by AVR-C, holds ADV value
+    </p>
+    
+    <hr>
+    
+    <br>
+        
+    <p><b>Explanation</b></p>    
+    <hr>    
+    <p>
+        Analog read from Pins!
+    </p>
+    
+    <p>
+        It's dangerous to go alone, read <a href="http://hekilledmywire.wordpress.com/2011/03/16/using-the-adc-tutorial-part-5/">this</a>.
+    </p>
+    <hr>
+
+</div>
+<div class="clear"></div>
+</details>
+
+<a name="Analog_Output"></a>
+<div class="grey_background">
+<div class="block">
+<details>
+<summary>Delay and Timers</summary>
+    <p>
+        Arduino: <a href="http://arduino.cc/en/Reference/delay">delay()</a> --- Atmel Datasheet: Sections 15, 16, and 18
+    </p>
+
+    <details>
+    <summary class="crimson">Delay</summary>    
+    
+    <p><b>Syntax</b></p>
+    <hr>
+    <p><span class="crimson">//Include delay .h</span></p>
+    <pre><code>#include &lt;util/delay.h&gt;</code></pre>
+    <p><span class="crimson">//Delay for delay_timer ms</span></p>
+    <pre><code>_delay_ms(delay_timer);</code></pre>
+    <hr>
+    </details>
+
+    <br>
+        
+    <details>
+    <summary class="crimson">Normal Mode</summary>    
+        
+    <p><b>Syntax (Initialize example)</b></p>
+    <hr>
+    <p><span class="crimson">//Set Prescaler (256 in this example)</span></p>
+    <pre class="amber"><code>TCCR<span class="cyan">i</span>B |= (1&lt;&lt;CS<span class="cyan">i</span>2);</code></pre>
+    <hr>
+        
+    <br>
+    
+    <p><b>Syntax (Timer value)</b></p>
+    <hr>
+    <p><span class="crimson">//Set Prescaler (256 in this example)</span></p>
+    <pre class="amber"><code>if (TCNT<span class="cyan">i</span> >= <span class="emerald">Target Timer Count</span>)</code></pre>
+    <pre><code>{</code></pre>
+    <p><span class="crimson">//Write your code here :)</span></p>
+    <p><span class="crimson">//Reset Timer</span></p>
+    <pre><code>TCNT<span class="cyan">i</span> = 0;</code></pre>
+    <p><span class="crimson">//Disable Timer (Haven't tested this yet)</span></p>
+    <pre class="amber"><code>TCCR<span class="cyan">i</span>B &= ~((1&lt;&lt;CS<span class="cyan">i</span>0)|(1&lt;&lt;CS<span class="cyan">i</span>1)|(1&lt;&lt;CS<span class="cyan">i</span>2));</code></pre>
+    <pre><code>}</code></pre>
+    <hr>
+        
+    </details>
+    
+    <br>
+    
+    <details>
+    <summary class="crimson">CTC Mode (clear timer on counter match)</summary>    
+    
+    <p><b>Syntax (Initialize example)</b></p>
+    <hr>
+    <p><span class="crimson">//Set Prescaler (256 in this example)</span></p>
+    <pre class="amber"><code>TCCR<span class="cyan">i</span>B |= (1&lt;&lt;CS<span class="cyan">i</span>2);</code></pre>
+    
+    <p><span class="crimson">//Set timer to CTC mode</span></p>
+    <pre class="amber"><code>TCCR<span class="cyan">i</span>B |= <span class="olive">(1&lt;&lt;WGM<span class="cyan">i</span>2);</span> </code></pre>
+
+    <p><span class="crimson">//Set Target Timer Count</span></p>
+    <pre><code><span class="emerald">OCR<span class="cyan">i</span>A = Target Timer Count;</code></pre>
+    
+    <p><span class="crimson">//Enable Timer Interrupts</span></p>
+    <pre class="taupe"><code>TIMSK<span class="cyan">i</span> |= (1&lt;&lt;OCIE<span class="cyan">i</span>A);</code></pre>
+    
+    <p><span class="crimson">//Enable Global Interrupts</span></p>
+    <pre><code>sei();</code></pre>
+    <hr>
+    
+    <br>
+        
+    <p><b>Syntax (ISR example)</b></p>
+    <hr>
+    <p><span class="crimson">//Define ISR Function</span></p>
+    <pre><code>ISR(TIMER<span class="cyan">i</span>_COMPA_vect)</code></pre>
+    
+    <pre><code>{</code></pre>
+    
+    <p><span class="crimson">//Write your code here :)</span></p>
+    
+    <pre><code>}</code></pre>
+    <hr>
+    </details>
+    
+    <br>
+        
+    <p><b>Registers</b></p>
+    <hr>
+    <p class="amber">
+        TCCR<span class="cyan">i</span>A: Timer/Counter Control Register A
+    </p>
+    <p class="amber">
+        TCCR<span class="cyan">i</span>B: Timer/Counter Control Register B
+    </p>
+    <p class="amber">
+        TCNT<span class="cyan">i</span>: Timer/Counter Register
+    </p>
+    <p class="amber">
+        CS<span class="cyan">i</span>[2:0]: Clock Select
+    </p>
+    <p class="olive">
+        WGM<span class="cyan">i</span>[2:0]: Waveform Generation Mode
+    </p>
+    <p class="emerald">
+        OCR<span class="cyan">i</span>A: Output Compare Register A
+    </p>
+    <p class="emerald">
+        OCR<span class="cyan">i</span>B: Output Compare Register B
+    </p>
+    <p class="taupe">
+        TIMSK<span class="cyan">i</span>: Timer/Counter Interrupt Mask Register
+    </p>
+    <p class="taupe">
+        OCIE<span class="cyan">i</span>A: Timer/Counter0 Output Compare Match A Interrupt Enable
+    </p>
+        <p class="taupe">
+        OCIE<span class="cyan">i</span>B: Timer/Counter0 Output Compare Match B Interrupt Enable
+    </p>
+    
+    <p class="cyan">
+        i = Timer; 0, 1, 2 (on ATMega328p)
+    </p>
+    
+
+    <hr>
+    
+    <br>
+        
+    <p><b>Explanation/ Equations</b></p>    
+    <hr>    
+    <p>
+        Timer Frequency = System Clock Frequency / Prescaler
+    </p>
+    <p>
+        <span class="emerald">Target Timer Count</span> = Timer Frequency / Target Frequency - 1 = Target Period / Timer Period - 1
+    </p>
+    <p>
+        System Clock Settings: Section 9; Arduino Uno clock frequency is 16mHz.
+    </p>
+    <p>
+        Prescaler Settings:
+    </p>
+    <div style="text-align: center;">
+     <figure>
+        <img style="height: 300px;" src="../images/prescaleImage.png">
+        <figcaption>Table 15-9 of ATMega328p datasheet</a></figcaption>
+    </figure>     
+    </div>
+    <p>
+        Target Frequency = Frequency of PWM; Target Timer Count = What timer counter will "hit" after Target Period has been reached.
+    </p>
+    
+    <p>
+        Waveform Settings:
+    </p>
+    <div style="text-align: center;">
+     <figure>
+        <img style="height: 300px;" src="../images/waveImage.png">
+        <figcaption>Table 15-8 of ATMega328p datasheet</a></figcaption>
+    </figure>     
+    </div>
+    
+    
+    <hr>
+</div>
+<div class="clear"></div>
+</div>
+</details>
+
+
+
+</div>
+<footer>
+    <div class="footercolor">
+    <table>
+        <td><p>Copyright 2014 Jordan Rejaud</p></td>
+        <td>
+            <p><a href="mailto:jrejaud@gmail.com">Contact</a></p>    
+        </td>
+        <td>
+            <p><a href="https://twitter.com/JordanRejaud">Twitter</a></p>  
+        </td>
+        <td>
+            <p><a href="https://www.facebook.com/jrejaud">Facebook</a></p>
+        </td>
+        <td>
+            <p><a href="https://github.com/jrejaud">GitHub</a></p>
+        </td>
+        <td>
+            <p><a href="https://www.linkedin.com/profile/view?id=141100597">LinkedIn</a></p>
+        </td>
+    </table>
+    </div>
+</footer>
+
+</body>
+
+
+</div>
+</html>

@@ -1,0 +1,484 @@
+/* Format.Css
+ * Written by Jordan Rejaud */
+
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+body,h2{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+
+/* Fonts */
+@font-face
+{
+    font-family: WeblySleekUI;
+    src: url(fonts/weblysleekuisl.ttf);
+}
+@font-face
+{
+    font-family: LearningCurve;
+    src: url(../fonts/LearningCurve.ttf)
+}
+@font-face
+{
+    font-family: WeblySleekUIBOLD;
+    src: url(fonts/weblysleekuisb.ttf);
+}
+
+/* Links */
+a { text-decoration: none; }
+a:link { color: #7C7A77; } /* Light Grey */
+a:visited { color: #7C7A77; }
+a:hover { color: #67217A; }
+
+p a:link { color: #1C4898;}
+p a:visited { color: #1C4898;}
+p a:hover { color: #67217A; }
+
+ol a:link { color: #1C4898;}
+ol a:visited { color: #1C4898;}
+ol a:hover { color: #67217A; }
+
+td a:link { color: #FFFFFF;}
+td a:visited { color: #FFFFFF;}
+td a:hover { color: #67217A; }
+
+/* Nav Bar */
+figcaption
+{
+    color: rgb(0,0,0);
+}
+nav
+{
+    background-color: rgb(26,26,26);
+    width: 100%;
+    height: 60px; /* originally 50px */
+    margin: 0;
+    padding: 0;
+    padding-bottom: 35px;
+    padding-top: 15px;
+    border-bottom: solid 6px rgb(255,200,12);
+}
+ul
+{
+    display: block;
+    list-style-type: none;
+    width: 1450px; /*Originally 1250px */
+    margin: 0 auto;
+    padding: 0;
+}
+ul li
+{
+    margin: 0;
+    padding: 0;
+}
+ul li a
+{
+    line-height: 1.6;
+    font-size: 30px;
+    display: block;
+    float: left;
+    max-height: 500px;
+    width: 200px;
+    margin: 0;
+    padding: 5px 0;
+    padding-top:30px; /* Originally 0 */
+    text-align: center;
+    color: #FFFFFF;
+}
+ol li
+{
+    color: rgb(0,0,0);
+}
+ol li a
+{
+    
+}
+/* Learning Table */
+table.learningtable
+{
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+table.learningtable td
+{
+    height: 300px;
+    border: none;
+    vertical-align: middle;
+    text-align: center;
+    width: 20%;
+    padding-top: 15px;
+}
+table.learningtable img
+{
+    height: 200px;
+    vertical-align: middle;
+}
+
+.learning_container
+{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.learning_block
+{
+    width: 33%;
+    float: left;
+    text-align: center;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+img.small_image
+{
+    height: 65px;
+}
+.learning_block img
+{
+    height: 200px;
+}
+
+
+body
+{
+    margin-left:0px;
+    margin-right:0px;
+    margin-bottom:5px; /* hacks for footer */
+    background-color: rgb(245,245,245);/*#DCDCDC;  #121211; Light Grey Background */
+    color: #FFFFFF; /* White Text */
+}
+.topblock
+{
+    margin-top: 40px;
+    color: #000000;
+}
+/*.topblock h1
+{
+    font-size: 275%;
+    color: rgb(103,33,122);
+}*/
+
+.abouttext
+{
+    margin-left:500px;
+}
+.topblock img
+{
+    height:450px;
+    margin-top: 145px;
+}
+
+/* Footer hacks */
+html {
+    position: relative;
+    min-height: 100%;
+}
+footer {
+    border-top: solid 6px rgb(255,200,12);
+    background-color: rgb(26,26,26);
+    margin-top: 20px;
+    text-align: center;
+    position: absolute;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    height: 5px;
+    width: 100%;
+    padding-bottom: 0px;
+}
+.footercr {
+    float: left;
+    color: #7C7A77;
+    margin-left: 65px;
+}
+.footercolor {
+    background-color: rgb(26,26,26);
+    
+}
+footer table {
+    margin-left: auto;
+    margin-right: 50px;
+}
+footer table td {
+    padding-left: 15px;
+    padding-right: 15px;
+    vertical-align: middle;
+}
+footer table td p
+{
+    color: #7C7A77;
+}
+ /*   height: 300px;
+    border: none;
+    vertical-align: middle;
+    text-align: center;
+    width: 20%;
+    padding-top: 15px; */
+
+/* Paragraphs and Headers */
+p
+{
+    line-height: 1.6;
+    font-size: 23px;
+    color: rgb(0,0,0);
+}
+p img
+{
+    float: left;
+    height:360px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+}
+pre
+{
+    line-height: 1.4;
+    font-size: 23px;
+    margin-left: 15px;
+    color: rgb(0,0,0);
+}
+h1
+{
+    margin-left: 15px;
+    line-height: 1.6;
+    /*font-size: 35px;*/
+    font-size: 45px;
+    color: rgb(103,33,122);
+}
+h1 img
+{
+    height: 300px;
+    float: left;
+    margin-right: 25px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+h2
+{
+    line-height: 1.4;
+    font-size: 30px;
+    color: rgb(18,126,17);
+}
+
+h2 a
+{
+    margin-left: 15px;
+    line-height: 1.4;
+}
+
+h3 
+{
+    color: #56C5FF; /* Blue Text */
+    margin-left: 40px;
+    line-height: 1.4;
+    font-size: 24px;
+}
+li
+{
+    font-size: 23px;
+    line-height: 1.4;
+}
+figcaption
+{
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Summary and details */
+summary
+{
+    color: #56C5FF; /* Blue Text */
+    margin-left: 15px;
+    font-size: 30px;
+    line-height: 1.4;
+}
+summary:hover
+{
+    color: #FFFFFF; /* White Text */
+}
+
+.cvnav
+{
+    width: 250px;
+}
+.blog_entry
+{
+    text-indent: 5em;
+}
+.project_list
+{
+    margin-left: 15px;
+    margin-right: 15px;
+    line-height: 1.4;
+    text-align: center;
+}
+.bottombar
+{
+    margin-bottom: 40px;
+}
+
+.lessonimage
+{
+    height:85px;
+    float: left;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 35px;
+    padding-bottom: 15px;
+}
+
+.ytvideo
+{
+    vertical-align: middle;
+    margin-top: 77px;
+    float: left;
+    margin-right: 25px;
+    margin-bottom: 15px;
+    width: 640px;
+    height: 360px;    
+}
+
+.websitepicture
+{
+    display: block;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 1300px;
+    margin-bottom: 35px;
+}
+.businesscards
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0px;
+    width: 100%;
+}
+.businesscard
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+}
+
+.ytvideo img
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.clear
+{
+    width: 100%;
+    height: 1px;
+    margin: 0 0 -1px;
+    clear:both;
+}
+.block
+{
+
+   margin-top: 15px;
+   margin-bottom: 15px;
+   padding-top: 2%;
+   padding-bottom: 2%;
+   padding-left: 25px;
+   padding-right: 25px;
+   /* margin-bottom: 25px; */
+   /* margin-top: 10px; */
+}
+.block h2
+{
+    text-align: center;
+}
+.block h3
+{
+    color: rgb(18,126,17);
+}
+.margins
+{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1400px;
+    /* margin-left: 8%;
+    margin-right: 8%; */
+}
+
+.efiimages
+{
+    text-align: center;
+}
+
+
+div.efiimages img
+{
+    height: 500px;
+}
+
+.footer
+{
+    text-align: center;
+    font-size: 75%;
+}
+
+/* Color Classes */
+.olive { color: #6D8764; }
+.cyan { color: #1BA1E2; }
+.crimson { color: #A20025; }
+.emerald { color: #008A00; }
+.amber { color: #F0A30A; }
+.taupe { color: #87794E; }
+.indigo { color: #6A00FF;}
+.bluetext {color: #56C5FF;}
+
+    
+.projectblock p {margin-left: 665px;
+		  text-align: justify;}
+
+.cvblock p {margin-left: 300px;
+	    margin-right: 50px;
+	    text-align: center;}
+
+.cvlist
+{
+    font-size: 225%;
+    margin-top: 35px;
+    margin-bottom: 25px;
+    color: rgb(0,155,198);
+}
+
+.cvimagebox img {
+    display: block;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+
+.cvimagebox
+{
+    height:300px;
+    width:300px;
+    min-width: 300px;
+    float: left
+}
+.resumelist h2
+{
+    padding-left: 15px;
+}
+.bloglist a {
+    line-height: 2;
+}
+.resumelist p
+{
+    margin-left: 35px;
+}
+/* Background Color Classes */
+/*.grey_background { background: rgb(63,173,255); }} */
+/*.grey_background p {color: rgb(0,0,0);}
+.grey_background h2 {color: rgb(0,0,0);}
+/*#222326; 
+/*.darkgrey_background { background-color: rgb(18,126,17); }
+.darkgrey_background h2 color: rgb(0,0,0);}
+.darkgrey_background p {color: rgb(0,0,0);}*/
+/*background-color: #121211;} */
