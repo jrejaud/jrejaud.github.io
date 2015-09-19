@@ -9,4 +9,5 @@ twitter_username: jordanrejaud
 github_username:  jrejaud
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
+#used to be kramdown
