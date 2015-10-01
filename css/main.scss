@@ -30,6 +30,11 @@ $on-laptop:        800px;
 .image-wrapper {
     text-align: center;
 
+    .image {
+      max-height: 300px;
+      padding-top: 15px;
+    }
+
     .image-caption {
         color: $grey-color;
         margin-top: $spacing-unit / 3;
