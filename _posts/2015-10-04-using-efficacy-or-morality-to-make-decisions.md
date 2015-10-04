@@ -41,11 +41,13 @@ Going off the assumption that you should only attempt an action that it is both 
 One can see two interesting cases in this table: 
 
 1. Action is Immoral and Efficacy is unknown  
-2. Action is Effective and Morality is unknown
+2. Action is Ineffective and Morality is unknown
 
 If you can't conclude the Efficacy of an action, but you **can** conclude that it is Immoral, then you **shouldn't attempt it**. It doesn't matter how effective an action is if you think its immoral (granted, morality could be a function of efficacity, but that's for a different blog post).
 
-If you can't conclude the Morality of an action, but you **can** conclude that it is Ineffective, then you **shouldn't attempt it**. It doesn't matter how moral an action is if it simply isn't effective. 
+If you can't conclude the Morality of an action, but you **can** conclude that it is Ineffective, then you **shouldn't attempt it**. It doesn't matter how moral an action is if it isn't effective.
+
+Thus, you can sometimes eliminate possible actions even without having all the data would like to have in order to make a decision. 
 
 [efficacy_def]: http://www.merriam-webster.com/dictionary/efficacy 
 [morality_def]: http://www.merriam-webster.com/dictionary/morality 
