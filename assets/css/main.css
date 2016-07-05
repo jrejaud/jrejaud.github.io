@@ -87,7 +87,7 @@
 		background-color: #ffffff;
 		background-image: url("../../images/bg.png");
 		background-repeat: no-repeat;
-		background-size: 100%;
+		background-size: contain;
 	}
 
 		body:after {
@@ -108,7 +108,7 @@
 			/*background-repeat: no-repeat;,			no-repeat;
 			background-size: 100px 100px, cover;*/
 			background-repeat: no-repeat;
-			background-size: 100%;
+			background-size: contain;
 			background-position: top left,		center center;
 			-moz-transition: opacity 1.75s ease-out;
 			-webkit-transition: opacity 1.75s ease-out;
