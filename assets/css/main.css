@@ -109,7 +109,7 @@
 			background-size: 100px 100px, cover;*/
 			background-repeat: no-repeat;
 			background-size: cover;
-			background-position: top left,		center center;
+			background-position: center;
 			-moz-transition: opacity 1.75s ease-out;
 			-webkit-transition: opacity 1.75s ease-out;
 			-ms-transition: opacity 1.75s ease-out;
