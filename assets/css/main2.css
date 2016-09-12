@@ -1069,7 +1069,7 @@
 /* Basic */
 
 	body {
-		background: #252122;
+		background: #1E1F23;
 		background-image: url("images/bg02.png");
 		font-family: 'Source Sans Pro';
 		font-weight: 300;
@@ -1094,7 +1094,7 @@
 	}
 
 	strong, b {
-		color: #252122;
+		color: #1E1F23;
 		font-weight: 400;
 	}
 
@@ -1121,7 +1121,7 @@
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		color: #252122;
+		color: #1E1F23;
 		font-weight: 700;
 	}
 
@@ -1158,7 +1158,7 @@
 
 	form label {
 		display: block;
-		color: #252122;
+		color: #1E1F23;
 		font-weight: 400;
 		margin: 0 0 0.5em 0;
 	}
@@ -1335,7 +1335,7 @@
 		input[type="reset"].alt,
 		button.alt,
 		.button.alt {
-			background: #252122;
+			background: #1E1F23;
 		}
 
 			input[type="button"].alt:hover,
@@ -1637,11 +1637,11 @@
 			}
 
 			.icon.featured.alt {
-				background-color: #252122;
+				background-color: #1E1F23;
 			}
 
 				.icon.featured.alt:after {
-					border-top-color: #252122;
+					border-top-color: #1E1F23;
 				}
 
 			.icon.featured.alt2 {
@@ -1664,7 +1664,7 @@
 	}
 
 		#banner header {
-			/*background-color: #252122;
+			/*background-color: #1E1F23;
 			background-color: rgba(34, 30, 31, 0.98);*/
 		}
 
@@ -1909,7 +1909,7 @@
 			}
 
 				#header h1 {
-					color: #252122;
+					color: #1E1F23;
 					font-weight: 900;
 					font-size: 2.5em;
 					letter-spacing: -0.035em;
@@ -2325,7 +2325,7 @@
 			}
 
 				#header h1 {
-					color: #252122;
+					color: #1E1F23;
 					font-weight: 900;
 					font-size: 1.75em;
 					letter-spacing: -0.035em;
